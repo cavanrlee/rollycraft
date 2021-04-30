@@ -109,28 +109,28 @@ window.onscroll = function() {
 
       function movesone() {
             const projectstimeline1 = gsap.timeline();
-            projectstimeline1.to("#slider-box", {xPercent: 0, ease:"power4"})
+            projectstimeline1.to("#slider-box", {xPercent: 0, ease:"slow"})
             .to("#ps",{strokeDashoffset: 630 - (630 * 90) / 100},"-=0.5")
             .to("#pr",{strokeDashoffset: 630 - (630 * 65) / 100},"-=0.5")
             .to("#html",{strokeDashoffset: 630 - (630 * 85) / 100 },"-=0.5")
       }
       function movestwo() {
             const projectstimeline2 = gsap.timeline();
-            projectstimeline2.to("#slider-box", {xPercent: -100, ease:"power4"})
+            projectstimeline2.to("#slider-box", {xPercent: -100, ease:"slow"})
             .to("#css3",{strokeDashoffset: 630 - (630 * 85) / 100},"-=0.5")
             .to("#javascript",{strokeDashoffset: 630 - (630 * 75) / 100},"-=0.5")
             .to("#JS6",{strokeDashoffset: 630 - (630 * 75) / 100},"-=0.5")
       }
       function movesthree() {
             const projectstimeline3 = gsap.timeline();
-            projectstimeline3.to("#slider-box", {xPercent: -200, ease:"power4"})
+            projectstimeline3.to("#slider-box", {xPercent: -200, ease:"slow"})
             .to("#PHP",{strokeDashoffset: 630 - (630 * 50) / 100 },"-=0.5")
             .to("#jQuery",{strokeDashoffset: 630 - (630 * 75) / 100},"-=0.5")
             .to("#dotNET",{strokeDashoffset: 630 - (630 * 60) / 100},"-=0.5")
       }
       function movesfour() {
             const projectstimeline4 = gsap.timeline();
-            projectstimeline4.to("#slider-box", {xPercent: -300, ease:"power4"})
+            projectstimeline4.to("#slider-box", {xPercent: -300, ease:"slow"})
             .to("#SQL",{strokeDashoffset: 630 - (630 * 70) / 100},"-=0.5")
             .to("#java",{strokeDashoffset: 630 - (630 * 45) / 100 },"-=0.5")
             .to("#autocad",{strokeDashoffset: 630 - (630 * 20) / 100},"-=0.5")
