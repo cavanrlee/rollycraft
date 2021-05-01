@@ -140,14 +140,14 @@ window.onscroll = function() {
       function showmodal(img) {
             document.getElementById("image-show").src = img;
             const viewmodal = gsap.timeline();
-            viewmodal.to("#web-modal-design", {yPercent: -100, ease:"power4"})
-            viewmodal.from("#image-view", {yPercent: 100, ease:"power4"},"-=0.8")
+            viewmodal.to("#web-modal-design", {display: "block",yPercent: -100, ease:"power4"})
+            viewmodal.from("#image-view", {display: "block",yPercent: 100, ease:"power4"},"-=0.8")
 
             
       }
       function closemodal() {
             const closedmodal = gsap.timeline();
-            closedmodal.to("#web-modal-design", {yPercent: 0, ease:"expo"})
+            closedmodal.to("#web-modal-design", {yPercent: 0,display: "none", ease:"expo"})
       }
       function next() {
             document.getElementById("dot4").checked = "true";
@@ -161,7 +161,7 @@ window.onscroll = function() {
 function MyBannerAmination() {
           var typewritter = new TimelineMax({paused:true});
           
-            typewritter.fromTo(".semi-colon", 0.5, {opacity: 0}, {opacity: 1,repeat: 2 ,ease: SteppedEase.config(3)}, 0); 
+            typewritter.fromTo(".semi-colon", 0.5, {opacity: 0}, {opacity: 1,repeat: 1 ,ease: SteppedEase.config(3)}, 0); 
             typewritter.fromTo(".semi-colon .colon", 1, {top: "220px",opacity: 1}, {top: "0",opacity:0,ease: "power4"}, 1.5); 
             typewritter.fromTo("#profile-img", 0.5, {opacity: 0}, {opacity: 1,ease: "power4"}, 2);      
             typewritter.fromTo(".banner-divider", 1, {yPercent: -100}, {yPercent: 0,ease: "power4"}, 2);      
