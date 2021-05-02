@@ -141,14 +141,15 @@ window.onscroll = function() {
             document.getElementById("image-show").src = img;
             const viewmodal = gsap.timeline();
             viewmodal.to("#web-modal-design", {display: "block",yPercent: -100, ease:"power4"})
-            viewmodal.from("#image-view", {display: "block",yPercent: 100, ease:"power4"},"-=0.8")
-
-            
+            viewmodal.from("#image-view", {display: "block",yPercent: 100, ease:"power4"},"-=0.8")    
       }
       function closemodal() {
             const closedmodal = gsap.timeline();
             closedmodal.to("#web-modal-design", {yPercent: 0,display: "none", ease:"expo"})
       }
+
+
+
       function next() {
             document.getElementById("dot4").checked = "true";
             movesfour();
