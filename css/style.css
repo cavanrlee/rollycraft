@@ -939,7 +939,7 @@ form .form-group {
 	}
 #web-modal-design .close-button {
 		z-index: 1;
-		position: relative;
+		position: absolute;
 		right: 25px;
 		top: 25px;
 		float: right;
