@@ -145,6 +145,7 @@ body {
 		border-radius: 50%;
 		cursor: pointer;
 		z-index: 99;
+		box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.15),0px 20px 46px 0px rgba(0, 0, 0, 0.15);
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
 }
@@ -407,7 +408,7 @@ input[type="radio"] {
 		height: auto;
 		font-size: 15px;
 		font-family: 'lato';
-		font-weight: normal;
+		font-weight: lighter;
 		margin-left: 20px;
 		margin-right: 20px;
 		color: #1e272c;
@@ -491,7 +492,7 @@ svg circle {
 .about-prog-laguages {
 	line-height: 20px;
 	font-size: 18px;
-	font-weight: lighter;
+	font-weight: normal;
 	position: absolute;
 	font-family: 'lato';
 	text-align: center;
@@ -557,13 +558,14 @@ svg circle {
 		height: 50px;
 		width: 50px;
 		background: #1e272c;
-		transform: translateY(-50%);
 		border: 1px solid #1e272c;
 		opacity: 0;
 		visibility: hidden;
 		-webkit-transition: .3s ease;
 		transition:.3s ease;
 		border-radius: 50%;
+		transform:
+		translateZ(75px) translateY(-50%);
 }
 .play-button-designs #play {
 		position: absolute;
@@ -576,7 +578,7 @@ svg circle {
 		border-bottom: 12px solid transparent; 
 		border-right: 12px solid transparent; 
 		-webkit-transition: .3s ease;
-		transition:.3s .1s ease;
+		transition:.3s ease;
 }
 .play-button-designs:hover {
 		transform: translateY(-50%) scale(1.03);
@@ -608,7 +610,7 @@ i {
 		margin-top: 100px;
 		width: 200px;
 		height: 50px;
-		background-color: #EEEEED;
+		background-color: #ffffff;
 		padding: 0 18px;
 		will-change: transform;
 		-webkit-transition: all .2s ease-in-out;
@@ -716,10 +718,15 @@ i {
 		bottom: 0;
 		background-color: rgba(255, 255, 255, 0.30);
 		-webkit-transition: .3s ease;
-		transition: .5s ease;
+		transition: .3s ease;
 		width: 100%;
 		height: 100%;
 		visibility: visible;
+		transform:
+		translateZ(70px);
+}
+.gp-design-projects .mask {
+		border-radius: 50% ;
 }
 .web-design-projects:hover img {
 		transform: scale(1.03);
@@ -735,25 +742,46 @@ i {
 		border-radius: 50%;
 		margin-top: 15px;
 		margin-bottom: 15px;
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
-		overflow: hidden;
+		-webkit-transition: 1s ease;
+		transition: 1s ease;
 		box-shadow: 0px 14px 20px 0px rgb(0 0 0 / 15%), 0px 20px 46px 0px rgb(0 0 0 / 15%);
 		z-index: 3;
 		background-color: #ffffff;
+		transform:
+			rotateY(-25deg)
+			rotateX(25deg);
+		transform-origin: 100% 50%;
+		transform-style: preserve-3d;
 }
 .gp-design-projects img {
 		transform-origin: center;
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
+		border-radius: 50%;
 		width: 100%;
+		height: 100%;
 		z-index: 0;
+		box-shadow: 0px 14px 20px 0px rgb(0 0 0 / 15%), 0px 20px 46px 0px rgb(0 0 0 / 15%);
+		transform:
+		translateZ(35px);
+}
+.gp-design-projects:hover img,
+.gp-design-projects:hover .mask,
+.gp-design-projects:hover {
+		transform:
+		rotateY(0deg)
+		rotateX(0deg)
+		translateZ(0px);
 }
 .gp-design-projects:hover img {
-		transform:  translateX(10%) scale(1.2);
+		-webkit-animation-delay: 0.5s;
+		animation-delay: 0.5s;
 }
 .gp-design-projects:hover .mask {
-		transform: translateX(-50%) rotate(-45deg);
+		-webkit-animation-delay: 1s;
+		animation-delay: 1s;
+		opacity: 0;
+		visibility: hidden;
 }
 .gp-design-projects:hover .play-button-designs {
 		opacity: 1;
@@ -944,16 +972,13 @@ form .form-group {
 		top: 25px;
 		float: right;
 		border-radius: 50%;
-		border: 1px solid transparent;
+		border: 1px solid #ffffff;
 		background-color: #1e272c;
 		width: 50px;
 		height: 50px;
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
 }
-#web-modal-design .close-button:hover {
-		border-color: #ffffff;
- }
 #web-modal-design .close-button .ex:nth-child(1),
 #web-modal-design .close-button .ex:nth-child(2){
 		top: 25%;
