@@ -59,7 +59,14 @@ body {
 }
 .sections-banner-container #profile-img img {
 		position: inherit;
-		margin-top: 10px;
+		margin-top: 5px;
+		-webkit-transition: .3s ease;
+		transition: .3s ease;
+		transform-origin: center;
+}
+.sections-banner-container #profile-img:hover img {
+		-webkit-transform: scale(1.03);
+		transform: scale(1.03);
 }
 #profile-img-container {
 		width: 180px;
@@ -74,7 +81,11 @@ body {
 		border-radius: 50%;
 }
 #profile-img-container .semi-colon .colon {
-		top: 220px;
+		top: 210px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 150px;
+		height: 150px;
 }
 #profile-img-container .semi-colon span {
 		width: 70px;
@@ -83,17 +94,17 @@ body {
 		display: block;
 		content: '';
 		right: 0;
-		top: 45%;
+		top: 25%;
 		background-color:#ffffff;
 		transform-origin: top center;
-		transform: rotate(35deg) translateX(15px);
-		border-top-right-radius: 50px;
+		transform: rotate(35deg) translateX(30px);
+		border-top-right-radius: 70px;
 }
 .sections-banner-container {
 		background-image: url('../assets/banner-img.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: 0 cover;
+		background-position: center;
 		background-attachment: fixed;
 		background-color: #1e272c;
 		width: 100%;
@@ -106,7 +117,7 @@ body {
 		background-image: url('../assets/design-background2.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: top;
+		background-position: 0 -120px;;
 }
 .slider-section #slider-box {
 		position: relative;
@@ -279,6 +290,7 @@ input[type="radio"] {
 		width: 10px;
 		content: '';
 		background-color: #ffffff;
+		opacity: 0;
 }
 #text-banner .header-paragraph {
 		text-align: left;
@@ -485,14 +497,14 @@ svg circle {
 	stroke:#1e272c;
 	stroke-width: 23px;
 	stroke-dasharray: 630px;
-	stroke-linecap: round; 
+	stroke-linecap: square; 
 	stroke-dashoffset: 630px;
 	
 }
 .about-prog-laguages {
 	line-height: 20px;
 	font-size: 18px;
-	font-weight: normal;
+	font-weight: lighter;
 	position: absolute;
 	font-family: 'lato';
 	text-align: center;
@@ -517,8 +529,8 @@ svg circle {
 		border: 1px solid #ffffff;
 		margin-top: 50px;
 		margin-bottom: 50px;
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
+		-webkit-transition: .3s .2s ease;
+		transition: .3s .2s ease;
 		overflow: hidden;
 }
 .button-designs span:before {
@@ -531,18 +543,19 @@ svg circle {
 		height: 55px;
 		transform: translate(-55px,-15px) skewX(-5deg);
 		border-left: 0px solid #1e272c;
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
+		-webkit-transition: .3s ease-in-out;
+		transition: .3s ease-in-out;
 }
 .button-designs:hover span:before {
 		width: 105%;
 		border-left-width: 35px;
-
 }
 .button-designs:hover {
 		color: #1e272c;
 		border: 1px solid #ffffff;
 		background-color: transparent;
+		-webkit-transform: scale(1.03);
+		transform: scale(1.03);
 }	
 .button-designs:focus,
 .play-button-designs:focus,
@@ -613,12 +626,11 @@ i {
 		background-color: #ffffff;
 		padding: 0 18px;
 		will-change: transform;
-		-webkit-transition: all .2s ease-in-out;
-		transition: all .2s ease-in-out;
+		-webkit-transition: all 0.7s ease-in-out;
+		transition: all 0.7s ease-in-out;
 }
 
 .share-btn-design:hover {
-    	transition-delay: .2s;
 		-webkit-transform: scale(1.03);
 		transform: scale(1.03)
 }
@@ -653,7 +665,6 @@ i {
 				align-items: center;
 		width: 240px;
 		height: 64px;
-		border-radius: 80px;
 }
 
 .icons-container i:nth-of-type(1) {
@@ -670,21 +681,16 @@ i {
         -webkit-transition-delay: .7s;
         transition-delay: .7s;
 }
-
 .icons-container i:nth-of-type(4) {
         -webkit-transition-delay: .4s;
         transition-delay: .4s;
 }
 .share-btn-design:hover span {
-		-webkit-transition-delay: .25s;
-		transition-delay: .25s;
 		-webkit-transform: translateX(-280px) scale(1.03);
 		transform: translateX(-280px) scale(1.03);
 }
 .share-btn-design:hover i {
 		opacity: 1;
-		-webkit-transform: scale(1.03);
-		transform: scale(1.03);
 }
 .sections-banner-container #section-img {
 		width: 100%;
@@ -694,7 +700,7 @@ i {
 		height: 250px;
 		width: 100%;
 		margin-top: 30px;
-		border-radius: 10px;
+		border-radius: 15px;
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
 		margin-top: 15px;
@@ -702,9 +708,9 @@ i {
 		overflow: hidden;
 		box-shadow: 0px 14px 20px 0px rgb(0 0 0 / 15%), 0px 20px 46px 0px rgb(0 0 0 / 15%);
 		z-index: 3;
-}
+} 
 .web-design-projects img {
-		transform-origin: center;
+		transform-origin: top;
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
 		width: 100%;
@@ -722,6 +728,8 @@ i {
 		width: 100%;
 		height: 100%;
 		visibility: visible;
+		-webkit-animation-delay: 1s;
+		animation-delay: 1s;
 		transform:
 		translateZ(70px);
 }
@@ -758,8 +766,8 @@ i {
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
 		border-radius: 50%;
-		width: 100%;
-		height: 100%;
+		width: 200px;
+		height: 200px;
 		z-index: 0;
 		box-shadow: 0px 14px 20px 0px rgb(0 0 0 / 15%), 0px 20px 46px 0px rgb(0 0 0 / 15%);
 		transform:
@@ -771,15 +779,10 @@ i {
 		transform:
 		rotateY(0deg)
 		rotateX(0deg)
-		translateZ(0px);
-}
-.gp-design-projects:hover img {
-		-webkit-animation-delay: 0.5s;
-		animation-delay: 0.5s;
+		translateZ(0px)
+		scale(1.02);
 }
 .gp-design-projects:hover .mask {
-		-webkit-animation-delay: 1s;
-		animation-delay: 1s;
 		opacity: 0;
 		visibility: hidden;
 }
@@ -884,6 +887,7 @@ form .form-group {
 		justify-content: center;
 		height: 200px;
 		width: 200px;
+		margin-top: 10%;
 }
 .footer {
 		position: relative;
@@ -904,6 +908,7 @@ form .form-group {
 .footer-items {
 		margin-left: 50%;
 		transform: translateX(-50%);
+		
 }
 #social-medias .social-icons {
 		display: inline-block;
@@ -1094,11 +1099,14 @@ input[type="checkbox"]{
 		.about-text {
 				font-size: 15px;
 		}
+		.slider-section {
+				background-position: top;
+		}
 		.prog {
 				transform: scale(0.895);
 		}
 		.resume-button {
-				margin-top: 0 !important;
+				margin-top: 70px !important;
 		}
 		form .form-group {
 				height: 70px;
@@ -1109,7 +1117,7 @@ input[type="checkbox"]{
 		#footer-logo {
 				transform: translate(-50%,0);
 				margin-left: 50%;
-				width: 35%;
+				width: 40%;
 				margin-top: 0;
 				height: auto;
 		}
