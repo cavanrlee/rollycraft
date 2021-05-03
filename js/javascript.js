@@ -162,23 +162,22 @@ window.onscroll = function() {
 function MyBannerAmination() {
           var typewritter = new TimelineMax({paused:true});
           
-            typewritter.fromTo(".semi-colon", 0.5, {opacity: 0}, {opacity: 1,repeat: 1 ,ease: SteppedEase.config(3)}, 0); 
-            typewritter.fromTo(".semi-colon .colon", 1, {top: "220px",opacity: 1}, {top: "0",opacity:0,ease: "power4"}, 1.5); 
-            typewritter.fromTo("#profile-img", 0.5, {opacity: 0}, {opacity: 1,ease: "power4"}, 2);      
-            typewritter.fromTo(".banner-divider", 1, {yPercent: -100}, {yPercent: 0,ease: "power4"}, 2);      
+            typewritter.fromTo(".semi-colon", 0.5, {opacity: 0}, {opacity: 1, ease: "ease"}, 0); 
+            typewritter.fromTo(".semi-colon .colon", 1, {top: "220px",opacity: 1}, {top: "0",opacity:0,ease: "power4"}, 1); 
+            typewritter.fromTo("#profile-img", 1, {opacity: 0}, {opacity: 1,ease: "slow"}, 2);      
+            typewritter.fromTo(".banner-divider", 1, {opacity: 0, yPercent: -100}, {opacity: 1,yPercent: 0,ease: "power4"}, 1);      
             typewritter.fromTo(".blinking", 0.5, {color: "transparent"}, {color: "#ffffff",repeat: 2 ,ease: SteppedEase.config(3)}, 2.5);    
             typewritter.fromTo(".anim-typ­ewriter1", 0.5, {opacity: 0}, {opacity: 1,ease: "power4"}, 4);
-            typewritter.fromTo(".anim-typ­ewriter1", 5, {width: "0"}, {width: "345px",ease: SteppedEase.config(7)}, 4);
-            typewritter.fromTo(".anim-typ­ewriter1", 0.5, {borderRightColor: "#ffffff"}, {borderRightColor: "transparent",repeat: 10,ease: SteppedEase.config(7)}, 4);
-            typewritter.fromTo(".banner-light", 1, {width: 0}, {width: "321px",ease: "power4"}, 9);    
-            typewritter.fromTo(".banner-dark", 1, {width: 0}, {width: "20%",ease: "power4"}, 9);  
-            typewritter.fromTo(".anim-typ­ewriter2", 5, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 10);
-            typewritter.fromTo(".anim-typ­ewriter2", 0.5, {borderRightColor: "transparent"}, {borderRightColor: "#ffffff",repeat: -1,ease: SteppedEase.config(9)}, 10);
-            typewritter.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 14);      
+            typewritter.fromTo(".anim-typ­ewriter1", 1, {opacity: 0, yPercent: 100}, {opacity: 1,yPercent: 0, ease: "power4"}, 4);
+            typewritter.fromTo(".banner-light", 1, {width: 0}, {width: "321px",ease: "power4"}, 4);    
+            typewritter.fromTo(".banner-dark", 1, {width: 0}, {width: "20%",ease: "power4"}, 4);  
+            typewritter.fromTo(".anim-typ­ewriter2", 3, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 4);
+            typewritter.fromTo(".anim-typ­ewriter2", 0.5, {borderRightColor: "transparent"}, {borderRightColor: "#ffffff",repeat: -1,ease: SteppedEase.config(9)}, 4);
+            typewritter.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 8);      
 
             typewritter.play();
             const swing = gsap.timeline();
-            swing.to(".arrow-anim", {yPercent: 70, ease:"power1",yoyo: true, repeat: -1, duration: 1});
+            swing.to(".arrow-anim", {yPercent: 70, ease:"power1",yoyo: true, repeat: -1, duration: 0.8});
 }
 
 
