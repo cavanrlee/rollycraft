@@ -1,6 +1,6 @@
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (currentScrollPos > 200) {
+  if (currentScrollPos > 150) {
         const navanimhide = gsap.timeline();
         navanimhide.to("#main-header", {yPercent: -100, ease:"bounce", duration: 0.5})
         navanimhide.to("#back-to-top", {opacity: 1,yPercent: 0, ease:"power1", duration: 0.5})
@@ -136,16 +136,20 @@ window.onscroll = function() {
             .to("#autocad",{strokeDashoffset: 630 - (630 * 20) / 100},"-=0.5")
       }
 
-
       function showmodal(img) {
             document.getElementById("image-show").src = img;
             const viewmodal = gsap.timeline();
             viewmodal.to("#web-modal-design", {display: "block",yPercent: -100, ease:"power4"})
-            viewmodal.from("#image-view", {display: "block",yPercent: 100, ease:"power4"},"-=0.8")    
+            viewmodal.from("#image-view", {display: "block",opacity: 0, yPercent: 100, ease:"power4"},"-=0.8")    
+            viewmodal.from(".share-btn-design", {opacity: 0,yPercent: 100, ease:"power4"},"-=0.5")    
+
       }
       function closemodal() {
             const closedmodal = gsap.timeline();
             closedmodal.to("#web-modal-design", {yPercent: 0,display: "none", ease:"expo"})
+            viewmodal.from("#image-view", {display: "none",opacity: 0,yPercent: 0, ease:"power4"})    
+            closedmodal.from(".share-btn-design", {opacity: 0, yPercent: 0, ease:"expo"})    
+
       }
 
 
@@ -162,18 +166,17 @@ window.onscroll = function() {
 function MyBannerAmination() {
           var typewritter = new TimelineMax({paused:true});
           
-            typewritter.fromTo(".semi-colon", 0.5, {opacity: 0}, {opacity: 1, ease: "ease"}, 0); 
+            typewritter.fromTo(".semi-colon", 1, {opacity: 0,transform: "scale(0.8)"}, {transform: "scale(1)",opacity: 1, ease: "ease"}, 0); 
             typewritter.fromTo(".semi-colon .colon", 1, {top: "220px",opacity: 1}, {top: "0",opacity:0,ease: "power4"}, 1); 
-            typewritter.fromTo("#profile-img", 1, {opacity: 0}, {opacity: 1,ease: "slow"}, 2);      
+            typewritter.fromTo("#profile-img", 1, {opacity: 0}, {opacity: 1,ease: "slow"}, 1);      
             typewritter.fromTo(".banner-divider", 1, {opacity: 0, yPercent: -100}, {opacity: 1,yPercent: 0,ease: "power4"}, 1);      
-            typewritter.fromTo(".blinking", 0.5, {color: "transparent"}, {color: "#ffffff",repeat: 2 ,ease: SteppedEase.config(3)}, 2.5);    
-            typewritter.fromTo(".anim-typ­ewriter1", 0.5, {opacity: 0}, {opacity: 1,ease: "power4"}, 4);
-            typewritter.fromTo(".anim-typ­ewriter1", 1, {opacity: 0, yPercent: 100}, {opacity: 1,yPercent: 0, ease: "power4"}, 4);
+            typewritter.fromTo(".blinking", 0.5, {color: "transparent"}, {color: "#ffffff",repeat: 2 ,ease: SteppedEase.config(3)}, 2);    
+            typewritter.fromTo(".anim-fadein", 1, {opacity: 0, yPercent: 100}, {opacity: 1,yPercent: 0, ease: "power4"}, 4);
             typewritter.fromTo(".banner-light", 1, {width: 0}, {width: "321px",ease: "power4"}, 4);    
-            typewritter.fromTo(".banner-dark", 1, {width: 0}, {width: "20%",ease: "power4"}, 4);  
-            typewritter.fromTo(".anim-typ­ewriter2", 3, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 4);
-            typewritter.fromTo(".anim-typ­ewriter2", 0.5, {borderRightColor: "transparent"}, {borderRightColor: "#ffffff",repeat: -1,ease: SteppedEase.config(9)}, 4);
-            typewritter.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 8);      
+            typewritter.fromTo(".banner-dark", 1, {width: 0}, {width: "79%",ease: "power4"}, 4.5);  
+            typewritter.fromTo(".anim-typ­ewriter2", 3.5, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 5);
+            typewritter.fromTo(".anim-typ­ewriter2", 0.5, {borderRightColor: "transparent"}, {borderRightColor: "#ffffff",repeat: -1,ease: SteppedEase.config(9)}, 5);
+            typewritter.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 10);      
 
             typewritter.play();
             const swing = gsap.timeline();
