@@ -12,7 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/anime.min.js"></script>
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -20,28 +19,40 @@
 	<script type="text/javascript" src="js/gsap/ScrollTrigger.min.js"></script>
 	<script type="text/javascript" src="js/gsap/TimelineMax.min.js"></script>
 
-
 <!-- Online links  -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body id="root">		
+	<span id="scroll-progress"></span>
+
 		<div id="main-header">	
-			<img src="assets/LOGO.png" rel="logo" width="100px" height="100px" id="header-main-logo">
-			<input type="checkbox" id="hamburger" role="button">
-			<ul id="navigation-header">
-				<li><span class="line-light"></span><span class="line-dark"></span><a href="#root" >HOME</a></li>
-				<li><span class="line-light"></span><span class="line-dark"></span><a href="#projects">PROJECTS</a></li>
-				<li><span class="line-light"></span><span class="line-dark"></span><a href="#about">ABOUT</a></li>
-				<li><span class="line-light"></span><span class="line-dark"></span><a href="#contact">CONTACT</a></li>
-			</ul>	
-			<label for="hamburger" id="mobile-navigation" onclick="navdropdown()"><span class="nav-light-shade" id="line-one" ></span><span class="nav-light-shade" id="line-two"></span><span class="nav-light-shade " id="line-three" ></span></label>
+			<img src="assets/LOGO.png" rel="mylogo" width="100px" height="100px" id="header-main-logo">
+				<label for="hamburger" id="mobile-navigation">
+					<input type="checkbox" id="hamburger" role="button">
+					<div id="nav">
+						<span  class="line" ></span>
+						<span  class="line" ></span>
+						<span  class="line" ></span>
+					</div>
+					<ul id="icon-nav">
+						<li class="active"><a href="#root"><i class="h-icons fa  fa-home" title="Home"></i></a></li>
+						<li><a href="#about"><i class="h-icons fa  fa-exclamation-circle" title="About"></i></a></li>
+						<li><a href="#projects"><i class="h-icons fa  fa-cube" title="Projects"></i></a></li>
+						<li><a href="#contact"><i class="h-icons fa  fa-phone" title="Contact"></i></a></li>
+					</ul>	
+				</label>
+					<ul id="navigation-header">
+						<li  class="active"><span class="line-light"></span><span class="line-dark"></span><a href="#root"><i class="fa  fa-home active"></i> HOME</a></li>
+						<li><span class="line-light"></span><span class="line-dark"></span><a href="#about"><i class="fa  fa-exclamation-circle"></i> ABOUT</a></li>
+						<li><span class="line-light"></span><span class="line-dark"></span><a href="#projects"><i class="fa  fa-cube"></i> PROJECTS</a></li>
+						<li><span class="line-light"></span><span class="line-dark"></span><a href="#contact"><i class="fa  fa-phone"></i> CONTACT</a></li>
+					</ul>	
 		</div>	
-		<span id="scroll-progress"></span>
 	
 		<div id="back-to-top" onclick=" window.location.href='#root'">
-			<img  src="assets/icons/back-to-top-arrow.png" width="50px" height="50px" draggable="false">
+			<img  src="assets/icons/back-to-top-arrow.png" type="image/png" width="50px" height="50px" draggable="false">
 		</div>
 
 <div id="web-modal-design">
@@ -56,10 +67,10 @@
 			<div class="share-btn-design">
 				<span>Share</span>
 				<div class="icons-container">
-					<i class="fa  fa-facebook-f"></i>
-					<i class="fa  fa-twitter"></i>
-					<i class="fa  fa-instagram"></i>
-					<i class="fa  fa-github"></i>
+					<i class="m-icons fa  fa-facebook-f"></i>
+					<i class="m-icons fa  fa-twitter"></i>
+					<i class="m-icons fa  fa-instagram"></i>
+					<i class="m-icons fa  fa-github"></i>
 				</div>
 			</div>
 		</div>
@@ -69,7 +80,7 @@
 
 </div>
 
-	<section class="sections-banner-container" style="padding-top: 200px">	
+	<section class="sections-banner-container">	
 		 <div class="container">
 				<div class="row  d-flex justify-content-center">
 					
@@ -84,7 +95,7 @@
 
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id = "text-banner">
 							<p class="header-paragraph blinking" >
-								Hi I'm <span id="my-name"> Rolly</span>
+								Hello I'm <span id="my-name"> Rolly</span>
 							</p>
 							<p class="header-paragraph anim-fadein">
 								ARTISTIC
@@ -147,7 +158,7 @@
 
 			<div class="row d-flex justify-content-center">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
-								<button class="button-designs resume-button" style="border-color: #1e272c; color:#1e272c; margin-top: 150px; margin-bottom: 30px;" onclick=" window.location.href='https://drive.google.com/u/0/uc?id=1hHihIpJwv2gA5GkHvh_kon4v_0tvejQM&export=download'" ><span>DOWNLOAD MY CV</span></button>
+								<button class="button-designs resume-button" style="border-color: #1e272c; color:#1e272c; margin-top: 150px; margin-bottom: 30px;" onclick=" window.location.href='https://drive.google.com/u/0/uc?id=1hHihIpJwv2gA5GkHvh_kon4v_0tvejQM&export=download'" ><span> <i class="fa  fa-download"></i> DOWNLOAD MY CV</span></button>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
@@ -163,82 +174,82 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-						<p class="header-text h-anim-2" id="projects"><span class="header-text-designs div-anim1 "></span>PROJECT WEBSITES</p>
+						<p class="header-text h-anim-2" id="projects"><span class="header-text-designs-left div-anim11 "></span>PROJECT WEBSITES<span class="header-text-designs-right div-anim12 "></span></p>
 				</div>
 			</div>
 
 			<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center prone" >
+							<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prone" >
 									<div class="web-design-projects">
 									<span class="mask"></span>
-										<img  src="assets/project1.jpg" onclick="showmodal(this.src)" width="auto" height="auto"  draggable="false" >
+										<img  src="assets/project1.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto"  draggable="false" >
 									</div>
 							</div>
 
-							<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center prtwo">
+							<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prtwo">
 									<div class="web-design-projects">
 									<span class="mask"></span>
-										<img  src="assets/project2.jpg" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false">
+										<img  src="assets/project2.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false">
 									</div>
 							</div>		
 			</div>	
 			<div class="row">
-								<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center prthree" >
+								<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prthree" >
 									<div class="web-design-projects">	
 									<span class="mask"></span>
-										<img class="design-projects" src="assets/project3.jpg" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
+										<img class="design-projects" src="assets/project3.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
 									</div>
 								</div>
 
-								<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center prfour" >
+								<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prfour" >
 									<div class="web-design-projects">	
 									<span class="mask"></span>	
-												<img  src="assets/project4.jpg" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
+												<img  src="assets/project4.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
 									</div>
 								</div>	
 			</div>
 
 			 <div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-						<p class="header-text h-anim-3" id="projects"><span class="header-text-designs div-anim2"></span>DIGITAL DESIGNS</p>
+						<p class="header-text h-anim-3" id="projects"><span class="header-text-designs-left div-anim21"></span>DIGITAL DESIGNS<span class="header-text-designs-right div-anim22 "></span></p>
 				</div>
 			</div>
 		
 			 <div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center prfive" >
+				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center anim-prfive" >
 							
 						<div class="gp-design-projects">
-							<button class="play-button-designs" onclick=" window.location.href='https://www.youtube.com/watch?v=qXtWksUg_Ak&t=1s'" ><span id="play"></span></button>
-							<span class="mask"></span>
-								<img  src="assets/Liza Vectoristified.jpg" onclick="showmodal(this.src)" width="auto" height="auto"  draggable="false" style="opacity: 0.9; background-color: #ffffff;" >
+							<a class="play-button-designs" target="_self" href="https://www.youtube.com/watch?v=qXtWksUg_Ak&t=1s" ><span id="play"></span></a>
+								<span class="mask"></span>
+									<img  src="assets/Liza Vectoristified.jpg"  title="click to view" onclick="showmodal(this.src)" width="auto" height="auto"  draggable="false" style="opacity: 0.9; background-color: #ffffff;" >
 							</div>
 						</div>
-				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center prsix">
+				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center anim-prsix">
 							<div class="gp-design-projects">
-							<button class="play-button-designs" onclick=" window.location.href='https://www.youtube.com/watch?v=4T7IJ58dJm4&t=365s'" ><span id="play"></span></button>
-							<span class="mask"></span>
-								<img  src="assets/Ryujin Vector_Vexel transparent.jpg"  onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" style="opacity: 0.9;background-color: #ffffff;">
+							<a class="play-button-designs" target="_self" href="https://www.youtube.com/watch?v=4T7IJ58dJm4&t=365s" ><span id="play"></span></a>
+								<span class="mask"></span>
+									<img  src="assets/Ryujin Vector_Vexel transparent.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" style="opacity: 0.9;background-color: #ffffff;">
 							</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center prseven" >
+				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center anim-prseven" >
 							<div class="gp-design-projects">
-							<button class="play-button-designs" onclick=" window.location.href='https://www.youtube.com/watch?v=m59F7Y_ybbk&t=195s'"><span id="play"></span></button>
-							<span class="mask"></span>
-								<img  src="assets/Yeji Vector_Vexel transparent .jpg"  onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" style=" background-color: #ffffff;" >
+							<a class="play-button-designs" target="_self" href="https://www.youtube.com/watch?v=m59F7Y_ybbk&t=195s"><span id="play"></span></a>
+								<span class="mask"></span>
+									<img  src="assets/Yeji Vector_Vexel transparent .jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" style=" background-color: #ffffff;" >
 							</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center preight" >
+				<div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center anim-preight" >
 							<div class="gp-design-projects">
-							<button class="play-button-designs" onclick=" window.location.href='https://www.youtube.com/watch?v=Cp0ppkODaVM'"><span id="play"></span></button>
-							<span class="mask"></span>
-								<img  src="assets/Somi Vector_Vexel transparent.jpg"   onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" style=" background-color: #ffffff;" >
+							<a class="play-button-designs" target="_self" href="https://www.youtube.com/watch?v=Cp0ppkODaVM"><span id="play"></span></a>
+								<span class="mask"></span>
+									<img  src="assets/Somi Vector_Vexel transparent.jpg" title="click to view"  onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" style=" background-color: #ffffff;" >
 							</div>
 				</div>
  			</div>
 		</div>    
 	</section>
 	
-<section class="slider-section">
+<section class="section-slider">
 
 	<span class="web-theme-top-decoration"></span>
 	<span class="web-theme-top"></span>
@@ -253,10 +264,10 @@
 	</div>
 	
 <div id="arrows">
-	<div class="nav-arrows" onclick="previous()">
+	<div class="nav-arrows" id="previous">
 		<img  src="assets/icons/left-arrow.png"  width="35px" height="35px" draggable="false">
 	</div>
-	<div class="nav-arrows" onclick="next()">
+	<div class="nav-arrows" id="next">
 		<img  src="assets/icons/right-arrow.png" width="35px" height="35px" draggable="false" >
 	</div>
 </div>	
@@ -425,16 +436,16 @@
 							<div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">	
 								<div id="nav-dots">
 									<input type="radio" name="navigation" id="dot1" checked>
-									<label for="dot1" class="dots" id="d1" onclick="movesone()" ></label>
+									<label for="dot1" class="dots" id="d1" ></label>
 	
 									<input type="radio" name="navigation" id="dot2">
-									<label for="dot2" class="dots" id="d2" onclick="movestwo()"></label>
+									<label for="dot2" class="dots" id="d2"></label>
 
 									<input type="radio" name="navigation" id="dot3">
-									<label for="dot3" class="dots" id="d3" onclick="movesthree()"></label>
+									<label for="dot3" class="dots" id="d3"></label>
 
 									<input type="radio" name="navigation" id="dot4">
-									<label for="dot4" class="dots" id="d4" onclick="movesfour()"></label>
+									<label for="dot4" class="dots" id="d4"></label>
 								</div>
 
 							</div>
@@ -453,36 +464,36 @@
 					<div class="row ">
 						<div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">	
 						
-							<p class="header-text  h-anim-5" ><span class="header-text-designs div-anim3"></span>CONTACT ME</p>
+							<p class="header-text  h-anim-5" ><span class="header-text-designs-left div-anim31"></span>CONTACT ME<span class="header-text-designs-right div-anim32"></span></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12">
-								<form role="form">
+								<form name="contact" method="POST" data-netlify="true">
 									 <div class="form-group">
-											 <input type="text" class="form-controls" id="firtsname" autocomplete="off" required>
+											 <input type="text" class="form-controls" id="firtsname" name="firtsname" autocomplete="off" required>
 											 <label for="firstname" class="form-label">Firstname</label>
 									 </div>
 									 <div class="form-group">
 	
-											 <input type="text" class="form-controls" id="lastname"autocomplete="off"required>
+											 <input type="text" class="form-controls" id="lastname" name="lastname" autocomplete="off"required>
 											 <label for="lastname" class="form-label">Lastname</label>
 	
 									 </div>
 									  <div class="form-group">
 	
-											 <input type="text" class="form-controls" id="email"autocomplete="off"required>
+											 <input type="text" class="form-controls" id="email" name="email"  autocomplete="off"required>
 											 <label for="email" class="form-label">Email</label>
 	
 									 </div>
 									 <div class="form-group">
 	
-											 <textarea type="text" class="form-controls" id="message" autocomplete="off" required></textarea>
+											 <textarea type="text" class="form-controls" id="message" name="message" autocomplete="off" required></textarea>
 											 <label for="message" class="form-labelfield">Message</label>
 	
 									 </div>
 	
-									 <button type="submit" class="button-designs "><span>SUBMIT</span></button>
+									 <button type="submit" class="button-designs "><span> <i class="fa  fa-send-o"></i> SUBMIT</span></button>
 								</form>
 	
 						</div>
