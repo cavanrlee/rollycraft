@@ -887,15 +887,16 @@ form .form-group .form-labelfield {
 		-webkit-transition: .3s ease;
 		transition:all .3s ease;
 }
-form .form-group {
+form .form-group:nth-child(1),
+form .form-group:nth-child(2),
+form .form-group:nth-child(3) {
 		height: 70px;
 		margin-bottom: 0;
 		-webkit-transition: .3s ease;
 		transition:all .3s ease;
 }
-.form-group:nth-child(4) {
-    	height: 95px;
-
+form .form-group:nth-child(4) {
+		height: 100px;
 }
 .form-controls:focus {
 		outline: none;
