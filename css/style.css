@@ -30,10 +30,9 @@ body {
 #scroll-progress {
 		position: fixed;
 		left: 0;
-		right: 0;
 		bottom: 0;
 		width: 0%;
-		height: 10px;
+		height: 2px;
 		z-index: 1000;
 		background-color: #ffffff;
 }
@@ -475,7 +474,7 @@ input[type="radio"] {
 .header-text-designs-right {
 	width: 10px;
 	height: 100%;
-	top: 5px;
+	top: 10px;
 	right: -25px;
 	background-color: #ffffff;
 	position: absolute;
@@ -1187,9 +1186,6 @@ input[type="checkbox"]{
 		}
 		.resume-button {
 				margin-top: 70px !important;
-		}
-		form .form-group {
-				height: 70px !important;
 		}
 		form .form-group:nth-child(1) {
 				margin-top: 20px;
