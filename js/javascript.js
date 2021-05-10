@@ -1,3 +1,4 @@
+
 // GSAP NAVIGATION HEADER ANIMATION
 
 $(document).ready(function() {
@@ -46,7 +47,7 @@ function HeaderTextAnimation() {
 
             const h1 = gsap.timeline();
             h1.from(".h-anim-1",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-            
+
                   ScrollTrigger.create({
                   animation: h1,
                   trigger: "h-anim-1",
@@ -110,9 +111,9 @@ function HeaderTextAnimation() {
             }); 
 }
 
-// GSAP SLIDERBOX ANIMATION
+// GSAP SLIDERBOX ANIMATION //
 
-// GSAP SLIDERBOX SKILL PERCENTAGE CONTROL
+// GSAP SLIDERBOX SKILL PERCENTAGE CONFIG //
 
 var ps = 90;
 var pr = 65;
@@ -127,57 +128,105 @@ var sql = 70;
 var java = 45;
 var autocad = 20;
 
+// =======================================================================
 
 var p = 1;
-  gsap.defaults({ease: "power4", duration: 1});
-    const skillanim = gsap.timeline();
-    skillanim.to("#ps",{strokeDashoffset: 630 - (630 * ps) / 100},"-=0.5")
-    .to("#pr",{strokeDashoffset: 630 - (630 * pr) / 100},"-=0.5")
-    .to("#html",{strokeDashoffset: 630 - (630 * html) / 100 },"-=0.5")
+const skillanim1 = anime.timeline({duration: 1000});
+skillanim1.add({targets: '#ps',strokeDashoffset: 630 - (630 * ps) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim1.add({targets: '#pr',strokeDashoffset: 630 - (630 * pr) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim1.add({targets: '#html',strokeDashoffset: 630 - (630 * html) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+
+const skillanim2 = anime.timeline({duration: 1000});
+skillanim2.add({targets: '#css3',strokeDashoffset: 630 - (630 * css3) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim2.add({targets: '#javascript',strokeDashoffset: 630 - (630 * javascript) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim2.add({targets: '#js6',strokeDashoffset: 630 - (630 * js6) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+
+const skillanim3 = anime.timeline({duration: 1000});
+skillanim3.add({targets: '#php',strokeDashoffset: 630 - (630 * php) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim3.add({targets: '#jquery',strokeDashoffset: 630 - (630 * jquery) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim3.add({targets: '#dotnet',strokeDashoffset: 630 - (630 * dotnet) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+
+const skillanim4 = anime.timeline({duration: 1000});
+skillanim4.add({targets: '#sql',strokeDashoffset: 630 - (630 * sql) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim4.add({targets: '#java',strokeDashoffset: 630 - (630 * java) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim4.add({targets: '#autocad',strokeDashoffset: 630 - (630 * autocad) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+
+const output1 = document.querySelector("#p-ps");
+const progress1 = {prog: 0}   
+anime({targets: progress1, prog: ps,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+const output2 = document.querySelector("#p-pr");      
+const progress2 = {prog: 0}   
+anime({targets: progress2, prog: pr ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+const output3 = document.querySelector("#p-html");
+const progress3 = {prog: 0}   
+anime({targets: progress3, prog: html ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});
+
+document.querySelector("#d1").onclick = skillanim1.restart;
+document.querySelector("#d2").onclick = skillanim2.restart;
+document.querySelector("#d3").onclick = skillanim3.restart;
+document.querySelector("#d4").onclick = skillanim4.restart;
+
 
       $("#d1").click(function() {
             p = 1;
             const skillanim1 = gsap.timeline();
             skillanim1.to("#slider-box", {xPercent: 0, ease:"slow"})
-            .to("#ps",{strokeDashoffset: 630 - (630 * ps) / 100},"-=0.5")
-            .to("#pr",{strokeDashoffset: 630 - (630 * pr) / 100},"-=0.5")
-            .to("#html",{strokeDashoffset: 630 - (630 * html) / 100 },"-=0.5")
+            const output1 = document.querySelector("#p-ps");
+            const progress1 = {prog: 0}   
+            anime({targets: progress1, prog: ps,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            const output2 = document.querySelector("#p-pr");      
+            const progress2 = {prog: 0}   
+            anime({targets: progress2, prog: pr ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            const output3 = document.querySelector("#p-html");
+            const progress3 = {prog: 0}   
+            anime({targets: progress3, prog: html ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});      
       });
 
       $("#d2").click(function() {
             p = 2;
             const skillanim2 = gsap.timeline();
             skillanim2.to("#slider-box", {xPercent: -100, ease:"slow"})
-            .to("#css3",{strokeDashoffset: 630 - (630 * css3) / 100},"-=0.5")
-            .to("#javascript",{strokeDashoffset: 630 - (630 * javascript) / 100},"-=0.5")
-            .to("#JS6",{strokeDashoffset: 630 - (630 * js6) / 100},"-=0.5")
+            const output1 = document.querySelector("#p-css3");
+            const progress1 = {prog: 0}   
+            anime({targets: progress1, prog: css3,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            const output2 = document.querySelector("#p-javascript");      
+            const progress2 = {prog: 0}   
+            anime({targets: progress2, prog: javascript ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            const output3 = document.querySelector("#p-js6");
+            const progress3 = {prog: 0}   
+            anime({targets: progress3, prog: js6 ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}}); 
       });
+
+
       $("#d3").click(function() {
             p = 3;
             const skillanim3 = gsap.timeline();
             skillanim3.to("#slider-box", {xPercent: -200, ease:"slow"})
-            .to("#PHP",{strokeDashoffset: 630 - (630 * php) / 100 },"-=0.5")
-            .to("#jQuery",{strokeDashoffset: 630 - (630 * jquery) / 100},"-=0.5")
-            .to("#dotNET",{strokeDashoffset: 630 - (630 * dotnet) / 100},"-=0.5")
+            const output1 = document.querySelector("#p-php");
+            const progress1 = {prog: 0}   
+            anime({targets: progress1, prog: php,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            const output2 = document.querySelector("#p-jquery");      
+            const progress2 = {prog: 0}   
+            anime({targets: progress2, prog: jquery ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            const output3 = document.querySelector("#p-dotnet");
+            const progress3 = {prog: 0}   
+            anime({targets: progress3, prog: dotnet ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});      
       });
       $("#d4").click(function() {
             p = 4;
             const skillanim4 = gsap.timeline();
+
             skillanim4.to("#slider-box", {xPercent: -300, ease:"slow"})
-            .to("#SQL",{strokeDashoffset: 630 - (630 * sql) / 100},"-=0.5")
-            .to("#java",{strokeDashoffset: 630 - (630 * java) / 100 },"-=0.5")
-            .to("#autocad",{strokeDashoffset: 630 - (630 * autocad) / 100},"-=0.5")
+            const output1 = document.querySelector("#p-sql");
+            const progress1 = {prog: 0}   
+            anime({targets: progress1, prog: sql,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            const output2 = document.querySelector("#p-java");      
+            const progress2 = {prog: 0}   
+            anime({targets: progress2, prog: java ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            const output3 = document.querySelector("#p-autocad");
+            const progress3 = {prog: 0}   
+            anime({targets: progress3, prog: autocad ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});
       });
-
-      ScrollTrigger.create({
-            animation: skillanim,
-            trigger: "#slider-box",
-            start: "top center",
-            end: "center center",
-            scrub: 1
-            });
-
-
       $("#next").click(function() {
             if (p < 4) {
                   p += 1;
@@ -221,11 +270,11 @@ var p = 1;
             }
       });
 
-// GSAP BANNER ANIMATION
+// GSAP BANNER ANIMATION  //
 
 function BannerAmination() {
             var banneranim = new TimelineMax({paused:true});     
-            banneranim.fromTo(".semi-colon", 1, {opacity: 0,transform: "scale(0.8)"}, {transform: "scale(1)",opacity: 1, ease: "ease"}, 0); 
+            banneranim.fromTo(".semi-colon", 1, {opacity: 0,transform: "scale(0.8)", yPercent: -200}, {transform: "scale(1)",opacity: 1, ease: "power4"}, 0.5); 
             banneranim.fromTo(".semi-colon .colon", 1, {top: "220px",opacity: 1}, {top: "0",opacity:0,ease: "power4"}, 1); 
             banneranim.fromTo("#profile-img", 1, {opacity: 0}, {opacity: 1,ease: "slow"}, 1);      
             banneranim.fromTo(".banner-divider", 1, {opacity: 0, yPercent: -100}, {opacity: 1,yPercent: 0,ease: "power4"}, 1);      
@@ -243,7 +292,7 @@ function BannerAmination() {
 }
 
 
-// GSAP PROJECTS ANIMATION
+// GSAP PROJECTS ANIMATION //
 
 function ProjectAnimation() {
             const pranim1 = gsap.timeline();
@@ -277,16 +326,11 @@ function ProjectAnimation() {
                   });
 }
 
-// PHP MAILER FUNCTION 
-
-
-
-// ANIMATION MAIN CONTROL 
+// ANIMATION MAIN CONTROL //
 
 BannerAmination();
 HeaderTextAnimation();
 ProjectAnimation();
-
 
 let ScrollMaster = gsap.timeline().to("#scroll-progress", {width: "100%"})  
 ScrollTrigger.create({
@@ -296,4 +340,3 @@ ScrollTrigger.create({
       end: "bottom bottom",
       scrub: 1,
 });
-
