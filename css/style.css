@@ -324,8 +324,10 @@ input[type="radio"] {
 		font-weight: bold;
 }
 #text-banner .header-paragraph:nth-child(2) {
+		color: #ffffff;
+		display: inline-block;
 		font-size: 72px;
-		font-family: revert;
+		font-family: inherit;
 		font-weight: Bolder;
 }
 #text-banner #developer {
@@ -863,7 +865,7 @@ textarea:focus {
 }
 form {
 		text-align: center;
-		margin: 30px 15px;
+		margin: 15px 30px;
 }
 form .form-group .form-label {
 		text-align: center;
@@ -900,8 +902,7 @@ form .form-group {
 		transition:all .3s ease;
 }
 form .form-group:nth-child(4) {
-		height: 100px;
-
+		height: 100px !important;
 }
 .form-controls:focus {
 		outline: none;
@@ -1192,6 +1193,9 @@ input[type="checkbox"]{
 		}
 		.resume-button {
 				margin-top: 70px !important;
+		}
+		form {
+				margin: 15px 50px;
 		}
 		form .form-group:nth-child(1) {
 				margin-top: 20px;
