@@ -1,6 +1,4 @@
 
-document.getElementsByName("form-name").style.display= "none";
-
 // GSAP NAVIGATION HEADER ANIMATION
 
 $(document).ready(function() {
