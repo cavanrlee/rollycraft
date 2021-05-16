@@ -30,7 +30,7 @@ body {
 #scroll-progress {
 		position: fixed;
 		left: 0;
-		bottom: 0;
+		top: 0;
 		width: 0%;
 		height: 2px;
 		z-index: 1000;
@@ -125,7 +125,7 @@ body {
 }
 .section-slider #slider-box {
 		position: relative;
-		width: 100vw;
+		width: 100%;
 		overflow-x: visible;
 		height: fit-content;
 }
@@ -139,6 +139,8 @@ body {
 .section-slider #slider-box .slider:nth-child(5) {
 		top: 0;
 		left: 0;
+		width: 100%;
+		height: 100%;
 		position: absolute;
 }
 .section-slider #slider-box .slider:nth-child(2) {
@@ -308,20 +310,19 @@ input[type="radio"] {
 		margin-bottom: 0;
 		margin-left: 20px;
 		margin-right: 20px;
+		font-family: 'Lato';
 		letter-spacing: 2px;
 		color: #ffffff;
 		line-height: normal;
 }
 #text-banner .header-paragraph:nth-child(1) {
 		font-size: 25px;
-		font-family: 'Lato';
 		font-weight: lighter;
-		margin-bottom: -15px;
+		margin-bottom: -20px;
 }
 #text-banner #my-name {
 		font-size: 50px;
-		font-family: 'lato';
-		font-weight: bold;
+		font-weight: bold !important;
 }
 #text-banner .header-paragraph:nth-child(2) {
 		color: #ffffff;
@@ -488,11 +489,10 @@ input[type="radio"] {
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;
-	position: relative;
 	box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.15),0px 20px 46px 0px rgba(0, 0, 0, 0.15);		  
 	overflow: hidden;
+	position: relative;
 	margin: 10px;
-
 }
 .bar:after {
 	content: "";
@@ -511,7 +511,9 @@ svg {
 	height: 100%;
 	position: relative;
 }
-
+.prog {
+	position: relative;
+}
 svg circle {
 	position: absolute;
 	transform: scale(0.895) rotate(90deg);
@@ -1065,7 +1067,7 @@ input[type="checkbox"]{
 }
 #icon-nav {
 		position: absolute;
-		top: -6px;
+		top: -10px;
 		right: 35px;
 		width: 155px;
 		list-style: none;
@@ -1078,15 +1080,14 @@ input[type="checkbox"]{
 		position: relative;
 		height: 35px;
 		width: 35px;
-		display: inline-block;
+		display: table-cell;
+		padding: 6px 10px 6px 6px;
 		transform: translateX(155px);
 		-webkit-transition: .6s ease;
 		transition: .6s ease;
 		opacity: 0;
 }
 #icon-nav li .h-icons {
-		padding-top: 3px;
-		padding-left: 2px;
 		font-size: 23px;
 		color: #ffffff70;	
 		-webkit-transition: .3s ease;
@@ -1099,8 +1100,8 @@ input[type="checkbox"]{
 		transform: scale(1.2);
 }
 #nav {
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
+		-webkit-transition: .3s ease-in-out;
+		transition: .3s ease-in-out;
 }
 #nav .line{
 		display: block;
@@ -1110,8 +1111,8 @@ input[type="checkbox"]{
 		height: 3px;
 		border-radius: 3px;
 		background-color: #ffffff;
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
+		-webkit-transition: .3s ease-in-out;
+		transition: .3s ease-in-out;
 }
 #nav .line:nth-child(2) {
 		transform: translate(0,6px);
@@ -1149,16 +1150,16 @@ input[type="checkbox"]{
 				visibility: visible;
 		}
 		#hamburger:checked ~ #icon-nav li:nth-child(4) {
-			-webkit-transition-delay: .6s;
-			transition-delay: .6s;
+				-webkit-transition-delay: .6s;
+				transition-delay: .6s;
 		}
 		#hamburger:checked ~ #icon-nav li:nth-child(3) {
 				-webkit-transition-delay: .4s;
 				transition-delay: .4s;
 		}
 		#hamburger:checked ~ #icon-nav li:nth-child(2) {
-			-webkit-transition-delay: .2s;
-			transition-delay: .2s;
+				-webkit-transition-delay: .2s;
+				transition-delay: .2s;
 		}
 		#navigation-header {
 				width: 100%;
@@ -1178,6 +1179,9 @@ input[type="checkbox"]{
 				margin-top: 35px;
 				transform: scale(0.8);
 		}
+		#profile-img-container {
+				transform: scale(0.80);
+		}
 		.banner-divider,
 		.text-divider {
 				margin-left: 10px;
@@ -1189,7 +1193,7 @@ input[type="checkbox"]{
 				background-position: top;
 		}
 		.prog {
-				transform: scale(0.895);
+				transform: scale(0.850);
 		}
 		.resume-button {
 				margin-top: 70px !important;
