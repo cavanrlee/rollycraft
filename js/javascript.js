@@ -59,7 +59,7 @@ function HeaderTextAnimation() {
             const h2 = gsap.timeline();
             h2.from(".h-anim-2",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
             h2.from(".div-anim11",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h2.from(".div-anim12",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.3");
+            h2.from(".div-anim12",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
             
             
                   ScrollTrigger.create({
@@ -73,7 +73,7 @@ function HeaderTextAnimation() {
             const h3 = gsap.timeline();
             h3.from(".h-anim-3",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
             h3.from(".div-anim21",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h3.from(".div-anim22",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.3");
+            h3.from(".div-anim22",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
 
                   ScrollTrigger.create({
                   animation: h3,
@@ -99,7 +99,7 @@ function HeaderTextAnimation() {
             const h5 = gsap.timeline();
             h5.from(".h-anim-5",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
             h5.from(".div-anim31",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h5.from(".div-anim32",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.3");
+            h5.from(".div-anim32",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
 
                   ScrollTrigger.create({
                   animation: h5,
@@ -113,7 +113,7 @@ function HeaderTextAnimation() {
 
 // GSAP SLIDERBOX ANIMATION //
 
-// GSAP SLIDERBOX SKILL PERCENTAGE CONFIG //
+// GSAP SLIDERBOX SKILL PERCENTAGES CONFIG ================================= //
 
 var ps = 90;
 var pr = 65;
@@ -128,7 +128,7 @@ var sql = 70;
 var java = 45;
 var autocad = 20;
 
-// =======================================================================
+// ======================================================================= //
 
 var p = 1;
 const skillanim1 = anime.timeline({duration: 1000});
@@ -153,13 +153,13 @@ skillanim4.add({targets: '#autocad',strokeDashoffset: 630 - (630 * autocad) / 10
 
 const output1 = document.querySelector("#p-ps");
 const progress1 = {prog: 0}   
-anime({targets: progress1, prog: ps,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+anime({targets: progress1, prog: ps,easing: "easeOutCirc",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
 const output2 = document.querySelector("#p-pr");      
 const progress2 = {prog: 0}   
-anime({targets: progress2, prog: pr ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+anime({targets: progress2, prog: pr ,easing: "easeOutCirc",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
 const output3 = document.querySelector("#p-html");
 const progress3 = {prog: 0}   
-anime({targets: progress3, prog: html ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});
+anime({targets: progress3, prog: html ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});
 
 document.querySelector("#d1").onclick = skillanim1.restart;
 document.querySelector("#d2").onclick = skillanim2.restart;
@@ -173,13 +173,13 @@ document.querySelector("#d4").onclick = skillanim4.restart;
             skillanim1.to("#slider-box", {xPercent: 0, ease:"slow"})
             const output1 = document.querySelector("#p-ps");
             const progress1 = {prog: 0}   
-            anime({targets: progress1, prog: ps,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress1, prog: ps,easing: "easeOutCirc",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
             const output2 = document.querySelector("#p-pr");      
             const progress2 = {prog: 0}   
-            anime({targets: progress2, prog: pr ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress2, prog: pr ,easing: "easeOutCirc",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
             const output3 = document.querySelector("#p-html");
             const progress3 = {prog: 0}   
-            anime({targets: progress3, prog: html ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});      
+            anime({targets: progress3, prog: html ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});      
       });
 
       $("#d2").click(function() {
@@ -188,13 +188,13 @@ document.querySelector("#d4").onclick = skillanim4.restart;
             skillanim2.to("#slider-box", {xPercent: -100, ease:"slow"})
             const output1 = document.querySelector("#p-css3");
             const progress1 = {prog: 0}   
-            anime({targets: progress1, prog: css3,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress1, prog: css3,easing: "easeOutCirc",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
             const output2 = document.querySelector("#p-javascript");      
             const progress2 = {prog: 0}   
-            anime({targets: progress2, prog: javascript ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress2, prog: javascript ,easing: "easeOutCirc",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
             const output3 = document.querySelector("#p-js6");
             const progress3 = {prog: 0}   
-            anime({targets: progress3, prog: js6 ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}}); 
+            anime({targets: progress3, prog: js6 ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}}); 
       });
 
 
@@ -204,13 +204,13 @@ document.querySelector("#d4").onclick = skillanim4.restart;
             skillanim3.to("#slider-box", {xPercent: -200, ease:"slow"})
             const output1 = document.querySelector("#p-php");
             const progress1 = {prog: 0}   
-            anime({targets: progress1, prog: php,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress1, prog: php,easing: "easeOutCirc",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
             const output2 = document.querySelector("#p-jquery");      
             const progress2 = {prog: 0}   
-            anime({targets: progress2, prog: jquery ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress2, prog: jquery ,easing: "easeOutCirc",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
             const output3 = document.querySelector("#p-dotnet");
             const progress3 = {prog: 0}   
-            anime({targets: progress3, prog: dotnet ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});      
+            anime({targets: progress3, prog: dotnet ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});      
       });
       $("#d4").click(function() {
             p = 4;
@@ -219,13 +219,13 @@ document.querySelector("#d4").onclick = skillanim4.restart;
             skillanim4.to("#slider-box", {xPercent: -300, ease:"slow"})
             const output1 = document.querySelector("#p-sql");
             const progress1 = {prog: 0}   
-            anime({targets: progress1, prog: sql,easing: "linear",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress1, prog: sql,easing: "easeOutCirc",round: 1,delay: 0,update: function() {output1.innerHTML = JSON.stringify(progress1).split(":")[1].split("}")[0] + "%";}});
             const output2 = document.querySelector("#p-java");      
             const progress2 = {prog: 0}   
-            anime({targets: progress2, prog: java ,easing: "linear",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress2, prog: java ,easing: "easeOutCirc",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
             const output3 = document.querySelector("#p-autocad");
             const progress3 = {prog: 0}   
-            anime({targets: progress3, prog: autocad ,easing: "linear",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});
+            anime({targets: progress3, prog: autocad ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});
       });
       $("#next").click(function() {
             if (p < 4) {
