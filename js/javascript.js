@@ -1,4 +1,3 @@
-
 // GSAP NAVIGATION HEADER ANIMATION
 
 $(document).ready(function() {
@@ -288,7 +287,7 @@ function BannerAmination() {
             banneranim.play();
       
             const swing = gsap.timeline();
-            swing.to(".arrow-anim", {yPercent: 70, ease:"power1",yoyo: true, repeat: -1, duration: 0.6});
+            swing.to(".arrow-anim", {yPercent: 100,opacity: 1, ease:"power1",yoyo: true, repeat: -1, duration: 0.8});
 }
 
 
