@@ -119,7 +119,7 @@ body {
 		background-image: url('../assets/design-background1.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: 0 -120px;;
+		background-position: 100%;
 		position: relative;
 		width: 100%;
 }
