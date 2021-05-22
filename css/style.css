@@ -27,6 +27,7 @@ body {
 		user-select: none;          /* Likely future */    
 		overflow-x: hidden !important;
 		width: 100% !important; 
+		font-family: 'lato' !important;
 }
 #scroll-progress {
 		position: fixed;
