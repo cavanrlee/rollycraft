@@ -339,7 +339,7 @@ input[type="radio"] {
 		font-family: inherit;
 		font-weight: Bolder;
 		background-color: #ffffff;
-		background-image: linear-gradient(to bottom right, #ff6a6a, #ffc96a, #80bfff, #71ff9a);
+		background-image: linear-gradient(to bottom right, #ffc96a, #80bfff, #71ff9a);
 		background-size: 200%;
 		background-position: -100%; 
 		background-clip: text;
