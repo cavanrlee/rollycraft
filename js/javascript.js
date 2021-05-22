@@ -46,6 +46,8 @@ function HeaderTextAnimation() {
 
             const h1 = gsap.timeline();
             h1.from(".h-anim-1",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
+            h1.from(".div-anim01",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
+            h1.from(".div-anim02",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
 
                   ScrollTrigger.create({
                   animation: h1,
@@ -84,7 +86,8 @@ function HeaderTextAnimation() {
             });
             const h4 = gsap.timeline();
             h4.from(".h-anim-4",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-
+            h4.from(".div-anim31",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
+            h4.from(".div-anim32",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
 
                   ScrollTrigger.create({
                   animation: h4,
@@ -97,8 +100,8 @@ function HeaderTextAnimation() {
 
             const h5 = gsap.timeline();
             h5.from(".h-anim-5",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-            h5.from(".div-anim31",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h5.from(".div-anim32",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
+            h5.from(".div-anim41",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
+            h5.from(".div-anim42",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
 
                   ScrollTrigger.create({
                   animation: h5,
