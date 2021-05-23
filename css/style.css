@@ -356,7 +356,7 @@ input[type="radio"] {
 }
 #text-banner #developer {
 		font-size: 20px;
-		font-family: 'Lato-Lght';
+		font-family: 'Lato-Light';
 		line-height: 45px;
 		letter-spacing: 26px;
 }
@@ -386,7 +386,7 @@ input[type="radio"] {
 		margin-top: 60px;
 		margin-left: 30px;
 		margin-right: 30px;
-		font-style: 'lato-light';
+		font-family: 'Lato-Light';
 		color: #ffffff;
 		text-align: center;
 		opacity: 0;
