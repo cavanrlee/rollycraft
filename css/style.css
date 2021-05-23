@@ -338,21 +338,6 @@ input[type="radio"] {
 		display: inline-block;
 		font-size: 72px;
 		font-family: 'Lato-Black';
-		background-color: #ffffff;
-		background-image: linear-gradient(to bottom right,#ffc96a, #80bfff, #71ff9a);
-		background-size: 200%;
-		background-position: -100%; 
-		background-clip: text;
-		-webkit-background-clip: text;
-		-moz-background-clip: text;
-		-webkit-text-fill-color: transparent; 
-		-moz-text-fill-color: transparent;
-		animation: animatedText 5s infinite alternate-reverse;
-}
-@keyframes animatedText{
-		to{
-			background-position: 100%; 
-		}
 }
 #text-banner #developer {
 		font-size: 20px;
@@ -564,57 +549,6 @@ svg circle {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-*, *::before, *::after {
-	box-sizing: border-box;
-  }
-  
-  @-webkit-keyframes rotate {
-	100% {
-	  transform: rotate(1turn);
-	}
-  }
-  
-  @keyframes rotate {
-	100% {
-	  transform: rotate(1turn);
-	}
-  }
-  .rainbow {
-	position: relative;
-	z-index: 0;
-	width: 400px;
-	height: 300px;
-	border-radius: 10px;
-	overflow: hidden;
-	padding: 2rem;
-  }
-  .rainbow::before {
-	content: "";
-	position: absolute;
-	z-index: -2;
-	left: -50%;
-	top: -50%;
-	width: 200%;
-	height: 200%;
-	background-color: #399953;
-	background-repeat: no-repeat;
-	background-size: 50% 50%, 50% 50%;
-	background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-	background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
-	-webkit-animation: rotate 4s linear infinite;
-			animation: rotate 4s linear infinite;
-  }
-  .rainbow::after {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	left: 6px;
-	top: 6px;
-	width: calc(100% - 12px);
-	height: calc(100% - 12px);
-	background: white;
-	border-radius: 5px;
-  }
 .button-designs {
 	z-index: 99;
 	position: relative;
