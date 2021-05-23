@@ -331,7 +331,7 @@ input[type="radio"] {
 #text-banner #my-name {
 		font-size: 50px;
 		font-weight: bold !important;
-		font-family: 'Lato' !important;
+		font-family: 'Lato-Light' !important;
 }
 #text-banner .header-paragraph:nth-child(2) {
 		color: #ffffff;
