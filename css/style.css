@@ -580,25 +580,28 @@ svg circle {
 	position: absolute;
 	display: block;
 	z-index: -1;
-	background-color: #ffffff;
+	background-color: transparent;
 	content: '';
-	width: 0%;
+	width: 100%;
 	height: 55px;
-	transform: translate(-65px,-15px) skewX(-5deg);
-	border-left: 0px solid #1e272c;
+	transform: translate(-60px,-15px) skewX(-5deg) scale(1.03);
+	border: 0px solid #1e272c;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
 .button-designs:hover span:before {
-	width: 105%;
 	border-left-width: 35px;
+	border-right-width: 35px;
+	background-color: #ffffff;
 }
 .button-designs:hover {
 	color: #1e272c;
 	border: 1px solid #ffffff;
 	background-color: transparent;
-	-webkit-transform: scale(1.03);
-	transform: scale(1.03);
+	-webkit-transition-delay: scale(1.03) .2s, skewX(-5deg) .2s;
+	transition-delay: scale(1.03) .2s , skewX(-5deg) .2s;
+	-webkit-transform: scale(1.03) skewX(-5deg);
+	transform: scale(1.03) skewX(-5deg);
 }	
 .button-designs:focus,	
 .play-button-designs:focus,
