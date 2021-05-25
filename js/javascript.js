@@ -286,8 +286,7 @@ function BannerAmination() {
             banneranim.fromTo(".banner-dark", 1, {width: 0}, {width: "79%",ease: "power4"}, 4.5);  
             banneranim.fromTo(".anim-typ­ewriter2", 3.5, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 5);
             banneranim.fromTo(".anim-typ­ewriter2", 0.5, {borderRightColor: "transparent"}, {borderRightColor: "#ffffff",repeat: -1,ease: SteppedEase.config(9)}, 5);
-            banneranim.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 10);      
-            banneranim.play();
+            banneranim.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 10);         banneranim.play();
       
             const swing = gsap.timeline();
             swing.to(".arrow-anim", {yPercent: 100,opacity: 1, ease:"power1",yoyo: true, repeat: -1, duration: 0.8});
@@ -334,7 +333,8 @@ BannerAmination();
 HeaderTextAnimation();
 ProjectAnimation();
 
-let ScrollMaster = gsap.timeline().to("#scroll-progress", {width: "100%"})  
+let ScrollMaster = gsap.timeline()
+.to("#scroll-progress", {width: "100%"})  
 ScrollTrigger.create({
       animation: ScrollMaster,
       trigger: "#root",
