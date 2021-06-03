@@ -15,12 +15,12 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (currentScrollPos > 150) {
         const navhide = gsap.timeline();
-        navhide.to("#main-header", {transform: "scale(0.90) translateY(10px)", backgroundColor: "#3f525dc2", ease:"power1", duration: 0.5})
-        navhide.to("#back-to-top", {opacity: 1,yPercent: 0, ease:"slow", duration: 1});
+        navhide.to("#main-header", {backgroundColor: "#1e272cc9", ease:"slow", duration: 1})
+        navhide.to("#back-to-top", {yPercent: 0, opacity: 1, ease:"slow", duration: 1});
   } else {
         const navshow = gsap.timeline();
-        navshow.to("#main-header", {transform: "scale(1) translateY(0)",marginTop: "0",backgroundColor: "#3f525d", ease:"power1", duration: 0.5})
-        navshow.to("#back-to-top", {opacity: 0, yPercent: 200, ease:"slow", duration: 1});
+        navshow.to("#main-header", {backgroundColor: "Transparent", ease:"slow", duration: 1})
+        navshow.to("#back-to-top", {yPercent: 250 ,opacity: 0,  ease:"slow", duration: 1});
   }
 }
 
@@ -29,13 +29,13 @@ window.onscroll = function() {
 function showmodal(img) {
             document.getElementById("image-show").src = img;
             const viewmodal = gsap.timeline();
-            viewmodal.to("#web-modal-design", {display: "block",yPercent: -100, ease:"power4"})
+            viewmodal.to("#web-modal-design", {display: "block",yPercent: -100, ease:"power4",duration: 1})
             viewmodal.from("#image-view", {display: "block",opacity: 0, yPercent: 100, ease:"power4"},"-=0.8")    
             viewmodal.from(".share-btn-design", {opacity: 0,yPercent: 100, ease:"power4"},"-=0.5")    
 }
 function closemodal() {
             const closedmodal = gsap.timeline();
-            closedmodal.to("#web-modal-design", {yPercent: 0,display: "none", ease:"expo"})
+            closedmodal.to("#web-modal-design", {yPercent: 0,display: "none", ease:"expo",duration: 1})
             viewmodal.from("#image-view", {display: "none",opacity: 0,yPercent: 0, ease:"power4"})    
             closedmodal.from(".share-btn-design", {opacity: 0, yPercent: 0, ease:"expo"})    
 }
@@ -275,27 +275,62 @@ document.querySelector("#d4").onclick = skillanim4.restart;
 // GSAP BANNER ANIMATION  //
 
 function BannerAmination() {
-            var banneranim = new TimelineMax({paused:true});     
-            banneranim.fromTo(".semi-colon", 1, {opacity: 0,transform: "scale(0.8)", yPercent: -200}, {transform: "scale(1)",opacity: 1, ease: "power4"}, 0.5); 
-            banneranim.fromTo(".semi-colon .colon", 1, {top: "220px",opacity: 1}, {top: "0",opacity:0,ease: "power4"}, 1); 
-            banneranim.fromTo("#profile-img", 1, {opacity: 0}, {opacity: 1,ease: "slow"}, 1);      
-            banneranim.fromTo(".banner-divider", 1, {opacity: 0, yPercent: -100}, {opacity: 1,yPercent: 0,ease: "power4"}, 1);      
-            banneranim.fromTo(".blinking", 0.5, {color: "transparent"}, {color: "#ffffff",repeat: 2 ,ease: SteppedEase.config(3)}, 2);    
-            banneranim.fromTo(".anim-fadein", 1, {opacity: 0, yPercent: 100}, {opacity: 1,yPercent: 0, ease: "power4"}, 4);
-            banneranim.fromTo(".banner-light", 1, {width: 0}, {width: "321px",ease: "power4"}, 4);    
-            banneranim.fromTo(".banner-dark", 1, {width: 0}, {width: "79%",ease: "power4"}, 4.5);  
-            banneranim.fromTo(".anim-typ­ewriter2", 3.5, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 5);
-            banneranim.fromTo(".anim-typ­ewriter2", 0.5, {borderRightColor: "transparent"}, {borderRightColor: "#ffffff",repeat: -1,ease: SteppedEase.config(9)}, 5);
-            banneranim.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 10);         banneranim.play();
+      const swing = gsap.timeline();
+      swing.to(".arrow-anim", {yPercent: 150, ease:"power1",yoyo: true, repeat: -1, duration: 0.8});
       
-            const swing = gsap.timeline();
-            swing.to(".arrow-anim", {yPercent: 100,opacity: 1, ease:"power1",yoyo: true, repeat: -1, duration: 0.8});
+            var banneranim = new TimelineMax({paused:true});         
+            banneranim.fromTo(".line-decor", 1, {width: "0%",}, {width: "120%",ease: "power4"}, 0);      
+            banneranim.fromTo(".blinking", 0.5, {color: "transparent"}, {color: "#ffffff",repeat: 2 ,ease: SteppedEase.config(3)}, 1);    
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(1)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.1);
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(2)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.2);
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(3)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.3);
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(4)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.4);
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(5)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.5);
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(6)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.6);
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(7)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.7);
+            banneranim.fromTo("#text-banner #artistic .letter:nth-child(8)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.8);
+            banneranim.fromTo(".banner-light", 1, {width: 0}, {width: "321px",ease: "power4"}, 3.5);    
+            banneranim.fromTo(".banner-dark", 1, {width: 0}, {width: "79%",ease: "power4"}, 4);  
+            banneranim.fromTo(".anim-typ­ewriter2", 3.5, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 4.5);
+            banneranim.fromTo(".anim-typ­ewriter2", 0.5, {borderRightColor: "transparent"}, {borderRightColor: "#ffffff70",repeat: -1,ease: SteppedEase.config(9)}, 4.5);
+            banneranim.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 7);    
+            banneranim.fromTo(".btn-anim ", 1, {visibility: "hidden",opacity: 0,yPercent: 100}, {visibility: "visible", opacity: 1, yPercent: 0,ease: "power2"}, 8);    
+            banneranim.fromTo(".arrow-anim", 1.5, {opacity: 0}, {opacity: 1,ease: "power2"}, 9);    
+            banneranim.fromTo("#header-social-medias .social-icons:nth-child(1)", 1, {opacity: 0,yPercent: 200 ,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0, ease: "power2"}, 9);    
+            banneranim.fromTo("#header-social-medias .social-icons:nth-child(2)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.2);    
+            banneranim.fromTo("#header-social-medias .social-icons:nth-child(3)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.4);    
+            banneranim.fromTo("#header-social-medias .social-icons:nth-child(4)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.6);    
+            banneranim.fromTo("#header-social-medias .social-icons:nth-child(5)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.8);    
+            banneranim.fromTo(".line-decor1", 1, {opacity: 0,yPercent: -100}, { opacity: 1, yPercent: 0,ease: "power2"}, 10);    
+            banneranim.fromTo(".line-decor2", 1, {opacity: 0,yPercent: 100}, {opacity: 1, yPercent: 0,ease: "power2"}, 10);    
+
+            banneranim.play();
+
 }
 
 
 // GSAP PROJECTS ANIMATION //
 
 function ProjectAnimation() {
+
+      const prslowanim = gsap.timeline();
+      prslowanim
+      .from(".anim-prone .web-design-projects img", {yPercent: -15, ease: "slow", duration: 2})
+      .from(".anim-prtwo .web-design-projects img", {yPercent: -15, ease: "slow", duration: 2})
+      .from(".anim-prthree .web-design-projects img", {yPercent: -15, ease: "slow", duration: 2})   
+      .from(".anim-prfour .web-design-projects img", {yPercent: -15, ease: "slow", duration: 2})
+            
+       
+            ScrollTrigger.create({
+            animation: prslowanim,
+            trigger: ".h-anim-2",
+            start: "top center",
+            end: "+=700",
+            scrub: 3
+            });
+            
+         
+
             const pranim1 = gsap.timeline();
             pranim1
             .from(".anim-prone", {opacity: 0,yPercent: 50, ease: "power4", duration: 1})
@@ -311,7 +346,7 @@ function ProjectAnimation() {
                   scrub: 2
                   });
 
-            const pranim2 = gsap.timeline();
+           const pranim2 = gsap.timeline();
             pranim2
             .from(".anim-prfive", {opacity: 0, transform: "scale(0)", ease: "power4", duration: 1})
             .from(".anim-prsix", {opacity: 0, transform: "scale(0)", ease: "power4", duration: 1})
