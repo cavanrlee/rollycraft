@@ -5,7 +5,7 @@
 	<meta name="keywords" content="Portfolio, Minimal Web Design, Web developer, FrontEnd Developer, Graphic Artist, Rolly Craft">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<meta name="author" content="Rolly Cavan">
-	<title>Rolly Craft Portfolio</title>
+	<title>Rolly Craft</title>
 	<link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 
 <head>
@@ -26,9 +26,12 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body id="root">	
-	<span id="scroll-progress"></span>
+
 		<div id="main-header">	
+		<span id="scroll-progress"></span>
+
 			<img src="assets/LOGO.png" rel="mylogo" width="100px" title="LOGO" height="100px" id="header-main-logo">
+			<span id= "logo-text" onclick=" window.location.href='#root'">PORTFOLIO</span>
 				<label for="hamburger" id="mobile-navigation">
 					<input type="checkbox" id="hamburger" role="button">
 					<div id="nav">
@@ -84,46 +87,61 @@
 					<source src="assets/Banner-intro.mp4" type="video/mp4">
 				</video>
 -->
+		<div id="header-social-medias">
+			<i  class= "social-icons fa fa-facebook"  onclick=" window.location.href='https://web.facebook.com/cavan.rolly/'"></i>
+			<i  class= "social-icons fa fa-pinterest"  onclick=" window.location.href='https://www.pinterest.ph/cavanrlee/_saved/'"></i>
+			<i  class= "social-icons fa fa-linkedin"  onclick=" window.location.href='http://linkin.com'"></i>
+			<i  class= "social-icons fa fa-youtube-play"  onclick=" window.location.href='https://www.youtube.com/channel/UCLVeLcz5Q0XoF3fJP-QFVVQ'"></i>
+			<i  class= "social-icons fa fa-github"  onclick=" window.location.href='https://github.com/cavanrlee'"></i>
+			<span class="line-decor1"></span>
+			<span class="line-decor2"></span>
+		
+		</div>
+
+
+
 		 <div class="container">
 				<div class="row  d-flex justify-content-center">
-					
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center ">
-						<div id="profile-img-container">
-							<div class="semi-colon" ><div class="colon"><span></span></div></div>
-							<div  id= "profile-img">
-								<img  src="assets/profile-img.png" width="100%" height="100%" draggable="false">
-							</div> 
-						</div>
-					</div>
-
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id = "text-banner">
-							<p class="header-paragraph blinking" >
-								Hello I'm <span id="my-name"> Rolly</span>
-							</p>
-							<p class="header-paragraph anim-fadein">
-								ARTISTIC
-							</p>
-							<p id="developer" class="header-paragraph anim-typ­ewriter2" style="overflow-x: hidden; border-right: 10px solid #ffffff;" >							
-								<span class="banner-light">
-								<span class="banner-dark">
-								</span>
+						<p class="header-paragraph blinking" >
+							Hello, I'm <span id="my-name"> Rolly</span>
+						</p>
+						<p class="header-paragraph anim-fadein" id="artistic">
+							<span class="letter">A</span>
+							<span class="letter">R</span>
+							<span class="letter">T</span>
+							<span class="letter">I</span>
+							<span class="letter">S</span>
+							<span class="letter">T</span>
+							<span class="letter">I</span>
+							<span class="letter">C</span>
+						</p>
+						<p id="developer" class="header-paragraph anim-typ­ewriter2" style="overflow-x: hidden; border-right: 2px solid #ffffff;" >							
+							<span class="banner-light">
+							<span class="banner-dark">
 							</span>
-								DEVELOPER
-							</p>
-						<span class="banner-divider"></span>
-					</div>
-				</div>
-				<div class="row d-flex justify-content-center">
-					<div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center" >
+						</span>
+							DEVELOPER
+						</p>
+
 						<p class="banner-qouets">I consider each of my projects an art piece.</p>
-					</div>	
+						<span class="line-decor"></span>
+				
 				</div>
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center ">
+
+				</div>
+
+
+				</div>
+
 				<div class="row d-flex justify-content-center">
-					<img  src="assets/icons/arrow down.png" class="arrow-anim" width="auto" height="auto" draggable="false" style="margin: 20px 0 0 0; opacity: 0;">
+					<img  src="assets/icons/arrow down.png" class="arrow-anim" width="auto" height="auto" draggable="false" style="margin: 50px 0 0 0; opacity: 0;">
 					
 				</div>
-				<div class="row d-flex justify-content-center">
-					<button class="button-designs btn-anim" onclick="window.location.href='#projects'">
+				<div class="row d-flex justify-content-center btn-anim" style="opacity: 0;visibility: hidden;">
+					<button class="button-designs" onclick="window.location.href='#projects'" >
 						<span >EXPLORE</span>
 					</button>
 
@@ -188,30 +206,34 @@
 			<div class="row">
 							<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prone" >
 									<div class="web-design-projects">
-									<span class="mask"></span>
 										<img  src="assets/project1.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto"  draggable="false" >
+										<img  src="assets/project1.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto"  draggable="false" >
+										<span class="mask"></span>
 									</div>
 							</div>
 
 							<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prtwo">
 									<div class="web-design-projects">
-									<span class="mask"></span>
 										<img  src="assets/project2.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false">
+										<img  src="assets/project2.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false">
+										<span class="mask"></span>
 									</div>
 							</div>		
 			</div>	
 			<div class="row">
 								<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prthree" >
 									<div class="web-design-projects">	
-									<span class="mask"></span>
 										<img class="design-projects" src="assets/project3.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
+										<img class="design-projects" src="assets/project3.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
+										<span class="mask"></span>
 									</div>
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-center anim-prfour" >
 									<div class="web-design-projects">	
-									<span class="mask"></span>	
-												<img  src="assets/project4.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
+										<img  src="assets/project4.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
+										<img  src="assets/project4.jpg" title="click to view" onclick="showmodal(this.src)" width="auto" height="auto" draggable="false" >
+										<span class="mask"></span>	
 									</div>
 								</div>	
 			</div>
@@ -290,7 +312,7 @@
 														<div class="prog">
 															<div class="bar">
 															<svg height= '100%' width='100%'><circle id="ps" cx='50%' cy='50%' r="50%"></circle></svg>
-															<p class="about-prog-laguages"  >Adobe Photoshop</br><span  id="p-ps" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>	
+															<p class="about-prog-laguages"  >Adobe Photoshop</br><span  id="p-ps" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>	
 															</div>
 														</div>
 	
@@ -300,7 +322,7 @@
 														<div class="prog">
 															<div class="bar">
 															<svg height= '100%' width='100%'><circle id="pr" cx='50%' cy='50%' r="50%"></circle></svg>
-															<p class="about-prog-laguages">Adobe Premiere</br><span  id="p-pr" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+															<p class="about-prog-laguages">Adobe Premiere</br><span  id="p-pr" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 
 															</div>
 														</div>
@@ -312,7 +334,7 @@
 								<div class="prog">
 									<div class="bar">
 									<svg height= '100%' width='100%'><circle id="html" cx='50%' cy='50%' r="50%"></circle></svg>
-									<p class="about-prog-laguages">HTML5</br><span  id="p-html" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+									<p class="about-prog-laguages">HTML5</br><span  id="p-html" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 									</div>
 								</div>
 			
@@ -329,7 +351,7 @@
 											<div class="prog">
 												<div class="bar">
 												<svg height= '100%' width='100%'><circle id="css3" cx='50%' cy='50%' r="50%"></circle></svg>
-												<p class="about-prog-laguages">CSS3</br><span id="p-css3" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+												<p class="about-prog-laguages">CSS3</br><span id="p-css3" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 												</div>
 											</div>
 					
@@ -340,7 +362,7 @@
 											<div class="prog">
 												<div class="bar">
 												<svg height= '100%' width='100%'><circle id="javascript" cx='50%' cy='50%' r="50%"></circle></svg>
-												<p class="about-prog-laguages">Javascript</br><span id="p-javascript" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+												<p class="about-prog-laguages">Javascript</br><span id="p-javascript" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 												</div>
 											</div>
 								
@@ -350,7 +372,7 @@
 						<div class="prog">
 							<div class="bar">
 							<svg height= '100%' width='100%'><circle id="js6" cx='50%' cy='50%' r="50%"></circle></svg>
-							<p class="about-prog-laguages">JS6</br><span id="p-js6" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+							<p class="about-prog-laguages">JS6</br><span id="p-js6" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 							</div>
 						</div>
 			
@@ -367,7 +389,7 @@
 											<div class="prog">
 												<div class="bar">
 												<svg height= '100%' width='100%'><circle id="php" cx='50%' cy='50%' r="50%"></circle></svg>
-												<p class="about-prog-laguages" >PHP</br><span  id="p-php" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+												<p class="about-prog-laguages" >PHP</br><span  id="p-php" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 												</div>
 											</div>
 							
@@ -377,7 +399,7 @@
 											<div class="prog">
 												<div class="bar">
 												<svg height= '100%' width='100%'><circle id="jquery"  cx='50%' cy='50%' r="50%"></circle></svg>
-												<p class="about-prog-laguages" >jQuery</br><span  id="p-jquery" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+												<p class="about-prog-laguages" >jQuery</br><span  id="p-jquery" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 												</div>
 											</div>
 						
@@ -388,7 +410,7 @@
 						<div class="prog">
 							<div class="bar">
 							<svg height= '100%' width='100%'><circle id="dotnet"  cx='50%' cy='50%' r="50%"></circle></svg>
-							<p class="about-prog-laguages" >VB.NET</br><span  id="p-dotnet" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+							<p class="about-prog-laguages" >VB.NET</br><span  id="p-dotnet" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 							</div>
 						</div>
 			
@@ -404,7 +426,7 @@
 											<div class="prog">
 												<div class="bar">
 												<svg height= '100%' width='100%'><circle id="sql" cx='50%' cy='50%' r="50%"></circle></svg>
-												<p class="about-prog-laguages">SQL</br><span  id="p-sql" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+												<p class="about-prog-laguages">SQL</br><span  id="p-sql" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 												</div>
 											</div>
 								
@@ -414,7 +436,7 @@
 											<div class="prog">
 												<div class="bar">
 												<svg height= '100%' width='100%'><circle id="java" cx='50%' cy='50%' r="50%"></circle></svg>
-												<p class="about-prog-laguages">Java</br><span  id="p-java" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+												<p class="about-prog-laguages">Java</br><span  id="p-java" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 												</div>
 											</div>
 							
@@ -424,7 +446,7 @@
 						<div class="prog">
 							<div class="bar">
 							<svg height= '100%' width='100%'><circle id="autocad" cx='50%' cy='50%' r="50%"></circle></svg>
-							<p class="about-prog-laguages">AutoCAD</br><span id="p-autocad" style="font-weight: bold; font-size: 30px; line-height: 30px;">0%</span></p>
+							<p class="about-prog-laguages">AutoCAD</br><span id="p-autocad" style="font: 30px 'Lato-Regular'; line-height: 30px;">0%</span></p>
 							</div>
 						</div>
 		
@@ -517,7 +539,7 @@
 					</div>
 				</div>	
 				<div id="footer-block">
-					<p><b><span style="color: #b9a335;">Designed</span></b> and <b><span style="color: #b9a335;">Developed</span></b> by <b>Rolly Cavan</b> © 2021</p>
+					<p>© 2021 | <b><span style="color: #ffabab;">Designed</span></b> and <b><span style="color: #ffabab;">Developed</span></b> by <b>Rolly Cavan.</b></p>
 				</div>			
 		</section>
 	<script type="text/javascript" src="js/javascript.js"></script>
