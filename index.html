@@ -56,7 +56,8 @@
 		</div>	
 	
 		<div id="back-to-top" onclick=" window.location.href='#root'">
-			<img  src="assets/icons/back-to-top-arrow.png" type="image/png" width="50px" height="50px" draggable="false">
+			<span class="ar"></span>
+			<span class="ar"></span>
 		</div>
 
 <div id="web-modal-design">
@@ -71,7 +72,7 @@
 			<div class="share-btn-design">
 				<span><i class="fa  fa-share"></i> Share</span>
 				<div class="icons-container">
-					<i class="m-icons fa  fa-facebook-f"></i>
+					<i class="m-icons fa  fa-facebook"></i>
 					<i class="m-icons fa  fa-twitter"></i>
 					<i class="m-icons fa  fa-instagram"></i>
 					<i class="m-icons fa  fa-github"></i>
@@ -87,16 +88,16 @@
 					<source src="assets/Banner-intro.mp4" type="video/mp4">
 				</video>
 -->
-		<div id="header-social-medias">
-			<i  class= "social-icons fa fa-facebook"  onclick=" window.location.href='https://web.facebook.com/cavan.rolly/'"></i>
-			<i  class= "social-icons fa fa-pinterest"  onclick=" window.location.href='https://www.pinterest.ph/cavanrlee/_saved/'"></i>
-			<i  class= "social-icons fa fa-linkedin"  onclick=" window.location.href='http://linkin.com'"></i>
-			<i  class= "social-icons fa fa-youtube-play"  onclick=" window.location.href='https://www.youtube.com/channel/UCLVeLcz5Q0XoF3fJP-QFVVQ'"></i>
-			<i  class= "social-icons fa fa-github"  onclick=" window.location.href='https://github.com/cavanrlee'"></i>
+		<ul id="header-social-medias">
+			<li><i  class= "social-icons fa fa-facebook"  onclick=" window.location.href='https://web.facebook.com/cavan.rolly/'"></i></li>
+			<li><i  class= "social-icons fa fa-youtube-play"  onclick=" window.location.href='https://www.youtube.com/channel/UCLVeLcz5Q0XoF3fJP-QFVVQ'"></i></li>
+			<li><i  class= "social-icons fa fa-pinterest"  onclick=" window.location.href='https://www.pinterest.ph/cavanrlee/_saved/'"></i></li>
+			<li><i  class= "social-icons fa fa-linkedin"  onclick=" window.location.href='http://linkin.com'"></i></li>
+			<li><i  class= "social-icons fa fa-github"  onclick=" window.location.href='https://github.com/cavanrlee'"></i></li>
 			<span class="line-decor1"></span>
 			<span class="line-decor2"></span>
 		
-		</div>
+		</ul>
 
 
 
@@ -137,8 +138,10 @@
 				</div>
 
 				<div class="row d-flex justify-content-center">
-					<img  src="assets/icons/arrow down.png" class="arrow-anim" width="auto" height="auto" draggable="false" style="margin: 50px 0 0 0; opacity: 0;">
-					
+					<div class="down-arrow arrow-anim"style="margin: 50px 0 0 0; opacity: 0;">
+						<span class="ar"></span>
+						<span class="ar"></span>
+					</div>	
 				</div>
 				<div class="row d-flex justify-content-center btn-anim" style="opacity: 0;visibility: hidden;">
 					<button class="button-designs" onclick="window.location.href='#projects'" >
@@ -294,10 +297,12 @@
 	
 <div id="arrows">
 	<div class="nav-arrows" id="previous">
-		<img  src="assets/icons/left-arrow.png"  width="35px" height="35px" draggable="false">
+		<span class="ar"></span>
+		<span class="ar"></span>
 	</div>
 	<div class="nav-arrows" id="next">
-		<img  src="assets/icons/right-arrow.png" width="35px" height="35px" draggable="false" >
+		<span class="ar"></span>
+		<span class="ar"></span>
 	</div>
 </div>	
 
@@ -500,24 +505,24 @@
 								<form name="contact-me" method="POST" data-netlify="true">
 									
 									 <div class="form-group">
-											 <input type="text" class="form-controls" id="firtsname" name="firtsname" autocomplete="off" required>
+											 <input type="text" class="form-controls" id="firtsname" placeholder="  Your name" name="firtsname" autocomplete="off" required>
 											 <label for="firstname" class="form-label">Firstname</label>
 									 </div>
 									 <div class="form-group">
 	
-											 <input type="text" class="form-controls" id="lastname" name="lastname" autocomplete="off"required>
+											 <input type="text" class="form-controls" id="lastname" placeholder="  Your lastname" name="lastname" autocomplete="off"required>
 											 <label for="lastname" class="form-label">Lastname</label>
 	
 									 </div>
 									  <div class="form-group">
 	
-											 <input type="text" class="form-controls" id="email" name="email"  autocomplete="off"required>
+											 <input type="text" class="form-controls" id="email" placeholder="  Your email" name="email"  autocomplete="off"required>
 											 <label for="email" class="form-label">Email</label>
 	
 									 </div>
 									 <div class="form-group" style="height: 100px;">
 	
-											 <textarea type="text" class="form-controls" id="message" name="message" autocomplete="off" required></textarea>
+											 <textarea type="text" class="form-controls" id="message" placeholder="  Your message" name="message" autocomplete="off" required></textarea>
 											 <label for="message" class="form-labelfield">Message</label>
 	
 									 </div>
@@ -528,13 +533,13 @@
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12">
 									<img  id="footer-logo"src="assets/LOGO.png" width="200px" height="200px"draggable="false" class="footer-items">
-									<div id="social-medias" class="footer-items">
-											<i  class= "social-icons fa fa-facebook"  onclick=" window.location.href='https://web.facebook.com/cavan.rolly/'"></i>
-											<i  class= "social-icons fa fa-pinterest"  onclick=" window.location.href='https://www.pinterest.ph/cavanrlee/_saved/'"></i>
-											<i  class= "social-icons fa fa-linkedin"  onclick=" window.location.href='http://linkin.com'"></i>
-											<i  class= "social-icons fa fa-youtube-play"  onclick=" window.location.href='https://www.youtube.com/channel/UCLVeLcz5Q0XoF3fJP-QFVVQ'"></i>
-											<i  class= "social-icons fa fa-github"  onclick=" window.location.href='https://github.com/cavanrlee'"></i>
-									</div>
+									<ul id="social-medias" class="footer-items">
+											<li><i  class= "social-icons fa fa-facebook"  onclick=" window.location.href='https://web.facebook.com/cavan.rolly/'"></i></li>
+											<li><i  class= "social-icons fa fa-youtube-play"  onclick=" window.location.href='https://www.youtube.com/channel/UCLVeLcz5Q0XoF3fJP-QFVVQ'"></i></li>
+											<li><i  class= "social-icons fa fa-pinterest"  onclick=" window.location.href='https://www.pinterest.ph/cavanrlee/_saved/'"></i></li>
+											<li><i  class= "social-icons fa fa-linkedin"  onclick=" window.location.href='http://linkin.com'"></i></li>
+											<li><i  class= "social-icons fa fa-github"  onclick=" window.location.href='https://github.com/cavanrlee'"></i></li>
+									</ul>
 						</div>
 					</div>
 				</div>	
