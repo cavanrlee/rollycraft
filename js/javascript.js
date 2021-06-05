@@ -46,8 +46,8 @@ function HeaderTextAnimation() {
 
             const h1 = gsap.timeline();
             h1.from(".h-anim-1",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-            h1.from(".div-anim01",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h1.from(".div-anim02",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
+            h1.from(".div-anim01",{opacity: 0, yPercent: -300, ease:"elastic", duration: 1});
+            h1.from(".div-anim02",{opacity: 0, yPercent: 300, ease:"elastic", duration: 1},"-=1");
 
                   ScrollTrigger.create({
                   animation: h1,
@@ -59,8 +59,8 @@ function HeaderTextAnimation() {
             });
             const h2 = gsap.timeline();
             h2.from(".h-anim-2",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-            h2.from(".div-anim11",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h2.from(".div-anim12",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
+            h2.from(".div-anim11",{opacity: 0, yPercent: -300, ease:"elastic", duration: 1});
+            h2.from(".div-anim12",{opacity: 0, yPercent: 300, ease:"elastic", duration: 1},"-=1");
             
             
                   ScrollTrigger.create({
@@ -73,8 +73,8 @@ function HeaderTextAnimation() {
             });
             const h3 = gsap.timeline();
             h3.from(".h-anim-3",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-            h3.from(".div-anim21",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h3.from(".div-anim22",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
+            h3.from(".div-anim21",{opacity: 0, yPercent: -300, ease:"elastic", duration: 1});
+            h3.from(".div-anim22",{opacity: 0, yPercent: 300, ease:"elastic", duration: 1},"-=1");
 
                   ScrollTrigger.create({
                   animation: h3,
@@ -86,8 +86,8 @@ function HeaderTextAnimation() {
             });
             const h4 = gsap.timeline();
             h4.from(".h-anim-4",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-            h4.from(".div-anim31",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h4.from(".div-anim32",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
+            h4.from(".div-anim31",{opacity: 0, yPercent: -300, ease:"elastic", duration: 1});
+            h4.from(".div-anim32",{opacity: 0, yPercent: 300, ease:"elastic", duration: 1},"-=1");
 
                   ScrollTrigger.create({
                   animation: h4,
@@ -100,8 +100,8 @@ function HeaderTextAnimation() {
 
             const h5 = gsap.timeline();
             h5.from(".h-anim-5",{opacity: 0, xPercent: -200, ease:"power4", duration: 0.5});
-            h5.from(".div-anim41",{opacity: 0, yPercent: -100, ease:"power4", duration: 0.5});
-            h5.from(".div-anim42",{opacity: 0, yPercent: 100, ease:"power4", duration: 0.5},"-=0.5");
+            h5.from(".div-anim41",{opacity: 0, yPercent: -300, ease:"elastic", duration: 1});
+            h5.from(".div-anim42",{opacity: 0, yPercent: 300, ease:"elastic", duration: 1},"-=1");
 
                   ScrollTrigger.create({
                   animation: h5,
@@ -296,11 +296,11 @@ function BannerAmination() {
             banneranim.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 7);    
             banneranim.fromTo(".btn-anim ", 1, {visibility: "hidden",opacity: 0,yPercent: 100}, {visibility: "visible", opacity: 1, yPercent: 0,ease: "power2"}, 8);    
             banneranim.fromTo(".arrow-anim", 1.5, {opacity: 0}, {opacity: 1,ease: "power2"}, 9);    
-            banneranim.fromTo("#header-social-medias .social-icons:nth-child(1)", 1, {opacity: 0,yPercent: 200 ,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0, ease: "power2"}, 9);    
-            banneranim.fromTo("#header-social-medias .social-icons:nth-child(2)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.2);    
-            banneranim.fromTo("#header-social-medias .social-icons:nth-child(3)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.4);    
-            banneranim.fromTo("#header-social-medias .social-icons:nth-child(4)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.6);    
-            banneranim.fromTo("#header-social-medias .social-icons:nth-child(5)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.8);    
+            banneranim.fromTo("#header-social-medias li:nth-child(1)", 1, {opacity: 0,yPercent: 200 ,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0, ease: "power2"}, 9);    
+            banneranim.fromTo("#header-social-medias li:nth-child(2)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.2);    
+            banneranim.fromTo("#header-social-medias li:nth-child(3)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.4);    
+            banneranim.fromTo("#header-social-medias li:nth-child(4)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.6);    
+            banneranim.fromTo("#header-social-medias li:nth-child(5)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.8);    
             banneranim.fromTo(".line-decor1", 1, {opacity: 0,yPercent: -100}, { opacity: 1, yPercent: 0,ease: "power2"}, 10);    
             banneranim.fromTo(".line-decor2", 1, {opacity: 0,yPercent: 100}, {opacity: 1, yPercent: 0,ease: "power2"}, 10);    
 
@@ -348,10 +348,10 @@ function ProjectAnimation() {
 
            const pranim2 = gsap.timeline();
             pranim2
-            .from(".anim-prfive", {opacity: 0, transform: "scale(0)", ease: "power4", duration: 1})
-            .from(".anim-prsix", {opacity: 0, transform: "scale(0)", ease: "power4", duration: 1})
-            .from(".anim-prseven", {opacity: 0, transform: "scale(0)", ease: "power4", duration: 1})
-            .from(".anim-preight", {opacity: 0, transform: "scale(0)", ease: "power4", duration: 1})
+            .from(".anim-prfive", {opacity: 0, transform: "scale(0)", ease: "elastic", duration: 1})
+            .from(".anim-prsix", {opacity: 0, transform: "scale(0)", ease: "elastic", duration: 1})
+            .from(".anim-prseven", {opacity: 0, transform: "scale(0)", ease: "elastic", duration: 1})
+            .from(".anim-preight", {opacity: 0, transform: "scale(0)", ease: "elastic", duration: 1})
 
                   ScrollTrigger.create({
                   animation: pranim2,
