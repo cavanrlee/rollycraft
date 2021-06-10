@@ -57,7 +57,6 @@ body {
 		z-index: 10000;
 		height: 100px;
 		background-color: transparent;
-		overflow: hidden;
 }
 .sections-banner-container {
 		background: url('../assets/banner-img.png');
@@ -936,56 +935,52 @@ input[type="email"] {
 		width: 100%;
 		height: 35px;
 		font-size: 14px;
-		color: #3f525d;
+		color: #ffffff;
 		font-family: 'Lato-Light';
 		letter-spacing: 1px;
 		text-indent: 100px;
-		border-bottom: 2px solid #ffffff;
+		border: 1px solid #ffffff70;
 		-webkit-transition: .3s ease;
 		transition: all .3s ease;
-
+		background-color: transparent;
 }
 textarea {
 		outline-style: none;
 		width: 100%;
-		color: #3f525d !important;
+		color: #ffffff !important;
 		resize: none !important;
 		padding-top: 5px;
 		height: 100px;
-		font-size: 14px;
+		font-size: 14px !important;
 		font-family: 'Lato-Light';
 		letter-spacing: 1px;
 		text-indent: 100px;
 		letter-spacing: 1px;
-		border-bottom: 2px solid #ffffff;
+		border: 1px solid #ffffff70;
 		-webkit-transition: .3s ease;
 		transition: all .3s ease;
+		background-color: transparent;
 }
 /* Browser suport */
 textarea::-webkit-input-placeholder {
-		color: #777777;  
 		font: 14px 'Lato-Light' !important;
 	}
 	
 	textarea:-moz-placeholder { /* Firefox 18- */
-		color: #777777;  
 		font: 14px 'Lato-Light' !important;
 	}
 	
 	textarea::-moz-placeholder {  /* Firefox 19+ */
-		color: #777777;  
 		font: 14px 'Lato-Light' !important;
 
 	}
 	
 	textarea:-ms-input-placeholder {
-		color: #777777;  
 		font: 14px 'Lato-Light' !important;
  
 	}
 	
 	textarea::placeholder {
-		color: #777777;  
 		font: 14px 'Lato-Light' !important; 
 
 	}
@@ -1054,7 +1049,7 @@ form .form-group:nth-child(5) {
 
 }
 .form-group:focus-within {
-		transform: scale(1.03,1.03);
+		transform: scale(1.03);
 }
 #footer-logo {
 		display: flex;
@@ -1109,7 +1104,6 @@ form .form-group:nth-child(5) {
 		min-width: 50px;
 		text-align: center;
 		z-index: 999;
-
 }
 #header-social-medias li .social-icons {
 		color: #ffffff70;
@@ -1380,7 +1374,7 @@ input[type="checkbox"]{
 }
 #icon-nav li .h-icons {
 		font-size: 23px;
-		color: #ffffff;	
+		color: #ffffff70;	
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
 }
@@ -1473,7 +1467,7 @@ input[type="checkbox"]{
 				padding-top: 150px;
 		}
 		.header-text {
-				font-size: 35px;
+				font-size: 30px;
 		}
 		#text-banner {
 				margin-top: 35px;
@@ -1492,7 +1486,7 @@ input[type="checkbox"]{
 				margin-top: 70px !important;
 		}
 		form {
-				margin: 15px 50px;
+				margin: 15px 15px;
 		}
 		form .form-group:nth-child(1) {
 				margin-top: 20px;
@@ -1507,6 +1501,9 @@ input[type="checkbox"]{
 		.footer {
 				background-position: center;
 		}
+		#footer-block {
+			    font-size: 13px;
+		}
 	}
 	@media only screen and (max-width: 425px) {
 		#logo-text {
@@ -1515,7 +1512,14 @@ input[type="checkbox"]{
 	}	
 	@media only screen and (max-width: 320px) {
 		#text-banner {
-			margin-left: -18%;
+				margin-left: -18%;
+		}
+		.header-text {
+				font-size: 25px;
+		}
+		.sections-banner-container .container .row .banner-qouets {
+			width: inherit;
+			text-align: left;
 		}
 	}	
 	
