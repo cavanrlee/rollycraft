@@ -163,6 +163,8 @@ const output3 = document.querySelector("#p-html");
 const progress3 = {prog: 0}   
 anime({targets: progress3, prog: html ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}});
 
+
+
 document.querySelector("#d1").onclick = skillanim1.restart;
 document.querySelector("#d2").onclick = skillanim2.restart;
 document.querySelector("#d3").onclick = skillanim3.restart;
