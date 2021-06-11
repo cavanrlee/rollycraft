@@ -1,3 +1,19 @@
+//MOVING EYE ANIMATION //
+
+$("#contact").mousemove(function(event) {
+      var eye = $(".eye");
+      var x = (eye.offset().left) + (eye.width() / 2);
+      var y = (eye.offset().top) + (eye.height() / 2);
+      var rad = Math.atan2(event.pageX - x, event.pageY - y);
+      var rot = (rad * (180 / Math.PI) * -1) + 180;
+      eye.css({
+        '-webkit-transform': 'rotate(' + rot + 'deg)',
+        '-moz-transform': 'rotate(' + rot + 'deg)',
+        '-ms-transform': 'rotate(' + rot + 'deg)',
+        'transform': 'rotate(' + rot + 'deg)'
+      });
+    });
+
 // GSAP NAVIGATION HEADER ANIMATION
 
 $(document).ready(function() {
@@ -281,7 +297,9 @@ function BannerAmination() {
       swing.to(".arrow-anim", {yPercent: 150, ease:"power1",yoyo: true, repeat: -1, duration: 0.8});
       
             var banneranim = new TimelineMax({paused:true});         
-            banneranim.fromTo(".line-decor", 1, {width: "0%",}, {width: "120%",ease: "power4"}, 0);      
+            banneranim.fromTo("#main-header", 1.5, {marginTop: "-100%",}, {marginTop: "0%",ease: "power4"}, 0);      
+            banneranim.fromTo("#logo-text", 1, {opacity: "0",}, {opacity: "1",ease: "power4"}, 1.5);      
+            banneranim.fromTo(".line-decor", 1, {width: "0%",}, {width: "120%",ease: "power4"}, 1);      
             banneranim.fromTo(".blinking", 0.5, {color: "transparent"}, {color: "#ffffff",repeat: 2 ,ease: SteppedEase.config(3)}, 1);    
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(1)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.1);
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(2)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.2);
@@ -291,6 +309,7 @@ function BannerAmination() {
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(6)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.6);
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(7)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.7);
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(8)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.8);
+            banneranim.fromTo(".sections-banner-container,#main-header", 1.5, {filter: "grayscale(1)"}, {filter: "grayscale(0)",ease: "power2"}, 3);    
             banneranim.fromTo(".banner-light", 1, {width: 0}, {width: "321px",ease: "power4"}, 3.5);    
             banneranim.fromTo(".banner-dark", 1, {width: 0}, {width: "79%",ease: "power4"}, 4);  
             banneranim.fromTo(".anim-typ­ewriter2", 3.5, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 4.5);
@@ -308,6 +327,28 @@ function BannerAmination() {
 
             banneranim.play();
 
+}
+
+// GSAP ABOUT ANIMATION //
+
+function AboutAnimation() {
+
+      const abouttextanim = gsap.timeline();
+      abouttextanim
+      .from(".animation1", {opacity: 0, left: "100%", ease: "slow", duration: 1})
+      .from(".textanimation1", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
+      .from(".animation2", {opacity: 0, left: "100%", ease: "slow", duration: 1})   
+      .from(".textanimation2", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
+      .from(".resume-button", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
+            
+       
+            ScrollTrigger.create({
+            animation: abouttextanim,
+            trigger: ".h-anim-1",
+            start: "top bottom",
+            end: "+=700",
+            scrub: 2
+            });
 }
 
 
@@ -367,6 +408,7 @@ function ProjectAnimation() {
 // ANIMATION MAIN CONTROL //
 
 BannerAmination();
+AboutAnimation();
 HeaderTextAnimation();
 ProjectAnimation();
 
