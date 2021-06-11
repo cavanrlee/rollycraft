@@ -356,7 +356,7 @@ input[type="radio"] {
 .line-decor2 {
 		left: 15px;
 		height: 90px;
-		bottom: -120px;
+		bottom: -100px;
 }
 .line-decor1 {
 		left: 15px;
@@ -625,51 +625,93 @@ svg circle {
 		left: 50%;
 		transform: translate(-50%, -50%);
 }
-.button-designs {
-		z-index: 99;
+.btn-shine {
 		position: relative;
 		outline-style: none;
 		height: 50px;
 		width: fit-content;
 		padding-right: 40px;
 		padding-left: 40px;
+		outline: none !important;
+		text-decoration: none;
+		cursor: pointer;
+		text-transform: uppercase;
+		margin: 50px 0 50px 0;
+		background-color: transparent;
+		border: 1px solid #ffabab;
+		color: #ffabab;
+		z-index: 99;
+		overflow: hidden;
+		transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.btn-shine span {
+		color: #ffabab;
 		font: 14px 'Lato-Light';
 		letter-spacing: 2px;
-		color: #ffabab;
-		background: transparent;
-		border: 1px solid #ffabab;
-		margin-top: 50px;
-		margin-bottom: 50px;
-		overflow: hidden;
-		-webkit-transition: transform .2s ease;
-		transition: transform .2s ease;
 }
-.button-designs span:before {
+.btn-shine:hover {
+		animation: rotate 0.7s ease-in-out both;
+}
+.btn-shine:hover span {
+		animation: storm 0.7s ease-in-out both;
+		animation-delay: 0.06s;
+}
+
+		@keyframes rotate {
+				0% {
+					transform: rotate(0deg) translate3d(0, 0, 0);
+				}
+				25% {
+					transform: rotate(3deg) translate3d(0, 0, 0);
+				}
+				50% {
+					transform: rotate(-3deg) translate3d(0, 0, 0);
+				}
+				75% {
+					transform: rotate(1deg) translate3d(0, 0, 0);
+				}
+				100% {
+					transform: rotate(0deg) translate3d(0, 0, 0);
+				}
+				}
+		@keyframes storm {
+				0% {
+					transform: translate3d(0, 0, 0) translateZ(0);
+				}
+				25% {
+					transform: translate3d(4px, 0, 0) translateZ(0);
+				}
+				50% {
+					transform: translate3d(-3px, 0, 0) translateZ(0);
+				}
+				75% {
+					transform: translate3d(2px, 0, 0) translateZ(0);
+				}
+				100% {
+					transform: translate3d(0, 0, 0) translateZ(0);
+				}
+				}
+.btn-shine span {
+		z-index: 20;
+}
+.btn-shine:after {
+		background: #ffabab;
+		content: "";
+		height: 155px;
+		left: -75px;
+		opacity: 0.4;
 		position: absolute;
-		display: block;
-		z-index: -1;
-		background-color: transparent;
-		content: '';
-		width: 100%;
-		height: 55px;
-		transform: translate(-40px,-16px) skewX(-5deg) scale(1.03);
-		border: 0px solid #ffabab;
-		-webkit-transition: .3s ease-in-out;
-		transition: .3s ease-in-out;
+		top: -50px;
+		transform: rotate(35deg);
+		transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+		width: 50px;
+		z-index: -10;
 }
-.button-designs:hover span:before {
-		border-left-width: 25px;
-		border-right-width: 25px;
-		background-color: #ffffff;
-}
-.button-designs:hover {
-		color: #1e272c;
-		border: 1px solid #ffffff;
-		background-color: transparent;
-		-webkit-transform: scale(1.03) skewX(-5deg);
-		transform: scale(1.03) skewX(-5deg);
+.btn-shine:hover:after {
+		left: 120%;
+		transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }	
-.button-designs:focus,	
+button:focus,	
 .play-button-designs:focus,
 #web-modal-design .close-button:focus {
 		outline-style: none;
@@ -909,7 +951,7 @@ svg circle {
 		rotateY(0deg)
 		rotateX(0deg)
 		translateZ(0px)
-		scale(1.02);
+		scale(1.01);
 }
 .gp-design-projects:hover img,
 .gp-design-projects:hover {
@@ -989,10 +1031,40 @@ input[type="email"]:focus,
 textarea:focus {
 		text-indent: 10px;
 }
+  #eye-head {
+		width: 100%;
+		height: 80px;
+		-webkit-transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+		transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+		transform: translateY(5px) scale(0.8);
+		opacity: 0;
+  }
+  .eye {
+		position: relative;
+		display: inline-block;
+		border-radius: 50%;
+		height: 30px;
+		width: 30px;
+		background: #ffffff;
+  }
+  .eye:after { /*pupil*/
+		position: absolute;
+		bottom: 17px;
+		right: 10px;
+		width: 10px;
+		height: 10px;
+		background: #1e272c;
+		border-radius: 50%;
+		content: " ";
+  }
 form {
 		text-align: center;
 		margin: 15px 30px;
 }
+#contact:hover #eye-head { 
+		transform: translateY(0) scale(1);
+		opacity: 1;
+}	
 form .form-group .form-label {
 		text-align: center;
 		width: 95px;
@@ -1005,7 +1077,7 @@ form .form-group .form-label {
 		line-height: 22px;
 		transform: translateY(-2.4em);
 		transform-origin: 0 0;
-		-webkit-transition: .3s ease;
+		-webkit-transition: all .3s ease;
 		transition: all .3s ease;
 }
 form .form-group .form-labelfield {
@@ -1019,7 +1091,7 @@ form .form-group .form-labelfield {
 		padding: 6px 6px 72px 5px;
 		transform: translateY(-7.1em);
 		transform-origin: 0 0;
-		-webkit-transition: .3s ease;
+		-webkit-transition: all .3s ease;
 		transition:all .3s ease;
 }
 form .form-group {
@@ -1111,7 +1183,7 @@ form .form-group:nth-child(5) {
 		font-size: 20px;
 		height: 30px;
 		width: 30px;
-		margin: 10px 0 10px 0;
+		margin: 15px 0 15px 0;
 		padding-top: 6.6px;
 		line-height: 18px;
 }
@@ -1172,7 +1244,7 @@ form .form-group:nth-child(5) {
 		border: 2px solid #ffabab;
 		background-color: transparent;
 		border-radius: 50%;
-		box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.15),0px 20px 46px 0px rgba(0, 0, 0, 0.15);		  
+		box-shadow: 0px 5px 4px 0px rgb(0 0 0 / 15%);	  
 		opacity: 0;
 		transform-origin: center;
 		-webkit-transition: border-color, .3s ease;
@@ -1484,6 +1556,12 @@ input[type="checkbox"]{
 		}
 		.resume-button {
 				margin-top: 70px !important;
+		}
+		.gp-design-projects {
+				transform:
+					rotateY(-25deg)
+					rotateX(25deg)
+					scale(0.85);
 		}
 		form {
 				margin: 15px 15px;
