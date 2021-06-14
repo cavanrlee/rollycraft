@@ -28,16 +28,17 @@ $(document).ready(function() {
       });
 });    
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (currentScrollPos > 150) {
-        const navhide = gsap.timeline();
-        navhide.to("#main-header", {backgroundColor: "#1e272cc9", ease:"slow", duration: 1})
-        navhide.to("#back-to-top", {yPercent: 0, opacity: 1, ease:"slow", duration: 1});
-  } else {
-        const navshow = gsap.timeline();
-        navshow.to("#main-header", {backgroundColor: "Transparent", ease:"slow", duration: 1})
-        navshow.to("#back-to-top", {yPercent: 250 ,opacity: 0,  ease:"slow", duration: 1});
-  }
+      var currentScrollPos = window.pageYOffset;
+      if (currentScrollPos > 200) {
+            const navhide = gsap.timeline();
+            navhide.to("#main-header", {backgroundColor: "#12171a90", ease:"slow", duration: 1})
+            navhide.to("#back-to-top", {yPercent: 0, opacity: 1, ease:"slow", duration: 1});
+
+      } else {
+            const navshow = gsap.timeline();
+            navshow.to("#main-header", {backgroundColor: "Transparent", ease:"slow", duration: 1})
+            navshow.to("#back-to-top", {yPercent: 250 ,opacity: 0,  ease:"slow", duration: 1});
+      }
 }
 
 // GSAP MODAL ANIMATION
@@ -45,15 +46,18 @@ window.onscroll = function() {
 function showmodal(img) {
             document.getElementById("image-show").src = img;
             const viewmodal = gsap.timeline();
-            viewmodal.to("#web-modal-design", {display: "block",yPercent: -100, ease:"power4",duration: 1})
-            viewmodal.from("#image-view", {display: "block",opacity: 0, yPercent: 100, ease:"power4"},"-=0.8")    
-            viewmodal.from(".share-btn-design", {opacity: 0,yPercent: 100, ease:"power4"},"-=0.5")    
+            viewmodal.to("#web-modal-design", {height: "100%", ease:"power4",duration: 1})
+            viewmodal.from("#image-view", {opacity: 0, yPercent: 100, ease:"power4" ,duration: 0.5},"-=0.8")    
+            viewmodal.from(".share-btn-design", {opacity: 0,yPercent: 150, ease:"power4",duration: 0.5},"-=0.5")   
+            viewmodal.play(); 
 }
 function closemodal() {
             const closedmodal = gsap.timeline();
-            closedmodal.to("#web-modal-design", {yPercent: 0,display: "none", ease:"expo",duration: 1})
-            viewmodal.from("#image-view", {display: "none",opacity: 0,yPercent: 0, ease:"power4"})    
-            closedmodal.from(".share-btn-design", {opacity: 0, yPercent: 0, ease:"expo"})    
+            closedmodal.to("#web-modal-design", {height: 0, ease:"expo",duration: 1})
+            closedmodal.from("#image-view", {opacity: 0,yPercent: 0, ease:"expo" ,duration: 0.5},"-=0.8")    
+            closedmodal.from(".share-btn-design", {opacity: 0, yPercent: 0, ease:"expo" ,duration: 0.5},"-=0.8")  
+            closedmodal.play(); 
+
 }
 
 // GSAP HEADERS ANIMATION
@@ -309,7 +313,6 @@ function BannerAmination() {
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(6)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.6);
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(7)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.7);
             banneranim.fromTo("#text-banner #artistic .letter:nth-child(8)", 1, {opacity: 0, yPercent: 100,xPercent: -50}, {opacity: 1,yPercent: 0,xPercent: 0, ease: "power4"}, 2.8);
-            banneranim.fromTo(".sections-banner-container,#main-header", 1.5, {filter: "grayscale(1)"}, {filter: "grayscale(0)",ease: "power2"}, 3);    
             banneranim.fromTo(".banner-light", 1, {width: 0}, {width: "321px",ease: "power4"}, 3.5);    
             banneranim.fromTo(".banner-dark", 1, {width: 0}, {width: "79%",ease: "power4"}, 4);  
             banneranim.fromTo(".anim-typ­ewriter2", 3.5, {width: "0"}, {width: "345px",ease: SteppedEase.config(9)}, 4.5);
@@ -317,14 +320,14 @@ function BannerAmination() {
             banneranim.fromTo(".banner-qouets", 1, {opacity: 0, yPercent: 200}, {opacity: 1, yPercent: 0,ease: "slow"}, 7);    
             banneranim.fromTo(".btn-anim ", 1, {visibility: "hidden",opacity: 0,yPercent: 100}, {visibility: "visible", opacity: 1, yPercent: 0,ease: "power2"}, 8);    
             banneranim.fromTo(".arrow-anim", 1.5, {opacity: 0}, {opacity: 1,ease: "power2"}, 9);    
-            banneranim.fromTo("#header-social-medias li:nth-child(1)", 1, {opacity: 0,yPercent: 200 ,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0, ease: "power2"}, 9);    
-            banneranim.fromTo("#header-social-medias li:nth-child(2)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.2);    
-            banneranim.fromTo("#header-social-medias li:nth-child(3)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.4);    
-            banneranim.fromTo("#header-social-medias li:nth-child(4)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.6);    
-            banneranim.fromTo("#header-social-medias li:nth-child(5)", 1, {opacity: 0,yPercent: 200,xPercent: 50}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.8);    
+            banneranim.fromTo("#header-social-medias li:nth-child(1)", 1, {opacity: 0,yPercent: 200}, {opacity: 1, yPercent: 0,xPercent: 0, ease: "power2"}, 9);    
+            banneranim.fromTo("#header-social-medias li:nth-child(2)", 1, {opacity: 0,yPercent: 200}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.2);    
+            banneranim.fromTo("#header-social-medias li:nth-child(3)", 1, {opacity: 0,yPercent: 200}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.4);    
+            banneranim.fromTo("#header-social-medias li:nth-child(4)", 1, {opacity: 0,yPercent: 200}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.6);    
+            banneranim.fromTo("#header-social-medias li:nth-child(5)", 1, {opacity: 0,yPercent: 200}, {opacity: 1, yPercent: 0,xPercent: 0,ease: "power2"}, 9.8);    
             banneranim.fromTo(".line-decor1", 1, {opacity: 0,yPercent: -100}, { opacity: 1, yPercent: 0,ease: "power2"}, 10);    
             banneranim.fromTo(".line-decor2", 1, {opacity: 0,yPercent: 100}, {opacity: 1, yPercent: 0,ease: "power2"}, 10);    
-
+            banneranim.fromTo(".sections-banner-container,#main-header", 1.5, {filter: "grayscale(1)"}, {filter: "grayscale(0)",ease: "power2"}, 10);    
             banneranim.play();
 
 }
@@ -335,9 +338,9 @@ function AboutAnimation() {
 
       const abouttextanim = gsap.timeline();
       abouttextanim
-      .from(".animation1", {opacity: 0, left: "100%", ease: "slow", duration: 1})
+      .from(".animation1", {opacity: 0, left: "100%",width: "100%", ease: "slow", duration: 1})
       .from(".textanimation1", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
-      .from(".animation2", {opacity: 0, left: "100%", ease: "slow", duration: 1})   
+      .from(".animation2", {opacity: 0, left: "100%",width: "100%", ease: "slow", duration: 1})   
       .from(".textanimation2", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
       .from(".resume-button", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
             
@@ -345,8 +348,8 @@ function AboutAnimation() {
             ScrollTrigger.create({
             animation: abouttextanim,
             trigger: ".h-anim-1",
-            start: "top bottom",
-            end: "+=700",
+            start: "top center",
+            end: "+=400",
             scrub: 2
             });
 }
@@ -376,10 +379,10 @@ function ProjectAnimation() {
 
             const pranim1 = gsap.timeline();
             pranim1
-            .from(".anim-prone", {opacity: 0,yPercent: 50, ease: "power4", duration: 1})
-            .from(".anim-prtwo", {opacity: 0, yPercent: 50, ease: "power4", duration: 1})
-            .from(".anim-prthree", {opacity: 0, yPercent: 50, ease: "power4", duration: 1})
-            .from(".anim-prfour", {opacity: 0, yPercent: 50, ease: "power4", duration: 1})
+            .from(".anim-prone", {opacity: 0,yPercent: 50, transform: "rotate(10deg)",transformOrigin: "top left", ease: "power4", duration: 1})
+            .from(".anim-prtwo", {opacity: 0, yPercent: 50, transform: "rotate(-10deg)",transformOrigin: "top right", ease: "power4", duration: 1})
+            .from(".anim-prthree", {opacity: 0, yPercent: 50, transform: "rotate(10deg)",transformOrigin: "top left", ease: "power4", duration: 1})
+            .from(".anim-prfour", {opacity: 0, yPercent: 50, transform: "rotate(-10deg)",transformOrigin: "top right", ease: "power4", duration: 1})
 
                   ScrollTrigger.create({
                   animation: pranim1,
@@ -400,7 +403,7 @@ function ProjectAnimation() {
                   animation: pranim2,
                   trigger: ".h-anim-3",
                   start: "top center",
-                  end: "+=700",
+                  end: "+=400",
                   scrub: 2
                   });
 }
@@ -411,6 +414,7 @@ BannerAmination();
 AboutAnimation();
 HeaderTextAnimation();
 ProjectAnimation();
+
 
 let ScrollMaster = gsap.timeline()
 .to("#scroll-progress", {width: "100%"})  
