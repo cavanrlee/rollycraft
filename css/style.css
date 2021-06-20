@@ -62,7 +62,7 @@ body {
 		background: url('../assets/banner-img.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: center 110%;
 		background-attachment: fixed;
 		background-color: #1e272c;
 		width: 100%;
@@ -79,6 +79,7 @@ body {
 		background-size: cover;
 		background-position: center;
 	*/
+		background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 		position: relative;
 		width: 100%;
 }
@@ -461,7 +462,7 @@ input[type="radio"] {
 		height: 110px;
 		transform: rotate(-3deg) translateX(-5px);
 		transform-origin: top left;
-		background: #ffffff;
+		background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
 .web-theme-top-decoration {
 		display: block;
@@ -485,7 +486,7 @@ input[type="radio"] {
 		height: 110px;
 		transform: rotate(-3deg) translateY(-100%);
 		transform-origin: bottom right;
-		background: #ffffff;
+		background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 		z-index: 2;
 }
 .web-theme-bottom-decoration {
@@ -502,15 +503,17 @@ input[type="radio"] {
 		background-position: right;
 		z-index: 1;
 }
-/*
+
 .section-abouts {	
+	/*
 		background-image: url('../assets/design-background1.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
-		background-color: transparent;
+	*/
+		background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
-*/
+
 .about-text-header,
 .skills-text-header {
 		color: #3f525d !important;
