@@ -62,7 +62,7 @@ body {
 		background: url('../assets/banner-img.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center 110%;
+		background-position: center;
 		background-attachment: fixed;
 		background-color: #1e272c;
 		width: 100%;
@@ -537,6 +537,7 @@ input[type="radio"] {
 		width: 10px;
 		content: '';
 		background-color: #3f525d;
+		transform-origin: left bottom;
 }
 .header-text {
 		color: #ffabab;
@@ -1531,6 +1532,7 @@ input[type="checkbox"]{
 		}
 		.sections-banner-container {
 				padding-top: 150px;
+				background-position: center  110%;
 		}
 		.header-text {
 				font-size: 30px;
