@@ -889,6 +889,12 @@ button:focus,
 		transform: rotate(-10deg);
 		box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.15),0px 20px 46px 0px rgba(0, 0, 0, 0.15);	
 }
+.gp-design-projects img,
+.web-design-projects img:nth-child(1),
+.web-design-projects img:nth-child(2) {
+		-webkit-filter: grayscale(1);
+		filter: grayscale(1);
+}	
 .web-design-projects .mask,
 .gp-design-projects .mask	{
 		z-index: 1;
@@ -954,6 +960,13 @@ button:focus,
 		translateZ(0px)
 		scale(1.01);
 }
+.web-design-projects:hover img:nth-child(1),
+.web-design-projects:hover img:nth-child(2),
+.gp-design-projects:hover img {
+		-webkit-filter: grayscale(0);
+		filter: grayscale(0);
+}
+
 .gp-design-projects:hover .play-button-designs{
 		transform: translateY(-50%) scale(1.03);
 		border-color: #ffffff;
