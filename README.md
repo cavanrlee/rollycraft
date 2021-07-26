@@ -1,6 +1,6 @@
 # My personal portfolio
 
-This is my personal portfolio using native html5,css3,Bootstrap and some plugins GSAP.js & Anime.js
+This is my personal portfolio using native HTML5,CSS3,Bootstrap and some plugins GSAP.js & Anime.js
 
 ## Any suggestions?
 
