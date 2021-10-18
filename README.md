@@ -2,9 +2,10 @@
   <img src="https://github.com/cavanrlee/rollycraft/blob/main/Banner.jpg">
 </p>
 
-
-<h1>Hey! 👋 I'm Rolly Cavan</h1>
-<h3 align='center'><b>Artistic Developer</b></h3> 
+<p>
+  <h1>Hey! 👋 I'm Rolly Cavan</h1>
+  <h3><b>Artistic Developer</b></h3> 
+</p>
 
 <p>This is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</p>
 
