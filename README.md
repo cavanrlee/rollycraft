@@ -9,17 +9,6 @@
 
 <p>This is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</p>
 
-## Any suggestions?
-
- I will appreciate any suggestions for development of my personal portfolio
-
-<h2>📫 How to reach me:</h2>
-
-To visit my website go to this url
-
-```
-https://rollycraft.netlify.app/
-```
 
 [![Visitor](https://visitor-badge.laobi.icu/badge?page_id=cavanrlee.rollycraft)](https://github.com/cavanrlee) [![GitHub followers](https://img.shields.io/github/followers/laxmena.svg?style=social&label=Follow)](https://github.com/cavanrlee?tab=followers)
 
@@ -29,7 +18,16 @@ https://rollycraft.netlify.app/
 - <i>Previously:</i> Freelance Front End Developer.
 
 
+<h3>📫 How to reach me:</h3>
 
+To visit my portfolio go to this url
+
+```
+https://rollycraft.netlify.app/
+```
+## Any suggestions?
+
+ I will appreciate any suggestions for development of my personal portfolio
 
 
 
