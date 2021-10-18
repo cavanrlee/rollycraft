@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/cavanrlee/rollycraft/blob/main/Banner.jpg">
+  <img src="https://github.com/cavanrlee/rollycraft/blob/main/Banner-new.jpg">
 </p>
 
 <p>
