@@ -2,7 +2,7 @@
 <!-- <h2 align='center'>Hi! Im Rolly Cavan</h2>
 <p align='center'><b>Artistic Developer</b></p> -->
 
-<h2>Hey! 👋 This is my personal portfolio using native HTML5,CSS3,Bootstrap and some plugins GSAP.js & Anime.js</h2>
+<h2>Hey! 👋 I'm Rolly Cavan! This is my personal portfolio using native HTML5,CSS3,Bootstrap and some plugins GSAP.js & Anime.js</h2>
 
 
 ## Any suggestions?
@@ -19,7 +19,7 @@ https://rollycraft.netlify.app/
 
 [![Visitor](https://visitor-badge.laobi.icu/badge?page_id=laxmena.laxmena)](https://github.com/laxmena) [![GitHub followers](https://img.shields.io/github/followers/laxmena.svg?style=social&label=Follow)](https://github.com/laxmena?tab=followers)
 
-I'm Lakshmanan Meiyappan! 
+
 - <i>Currently:</i> Academy for The Educational community for Asia - AICA Inc. 
 - <i>Previously:</i> Freelance Front End Developer.
 
