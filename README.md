@@ -17,11 +17,11 @@ To visit my website go to this url
 https://rollycraft.netlify.app/
 ```
 
-[![Visitor](https://visitor-badge.laobi.icu/badge?page_id=cavanrlee.cavanrlee)](https://github.com/cavanrlee) [![GitHub followers](https://img.shields.io/github/followers/laxmena.svg?style=social&label=Follow)](https://github.com/cavanrlee?tab=followers)
+[![Visitor](https://visitor-badge.laobi.icu/badge?page_id=cavanrlee.rollycraft)](https://github.com/cavanrlee) [![GitHub followers](https://img.shields.io/github/followers/laxmena.svg?style=social&label=Follow)](https://github.com/cavanrlee?tab=followers)
 
 <h2>Currently working on:</h2>
 
-- <i>Currently:</i> Academy for The Educational community for Asia - AICA Inc. 
+- <i>Currently:</i> Academy for The Educational Community for Asia - AICA Inc. 
 - <i>Previously:</i> Freelance Front End Developer.
 
 
