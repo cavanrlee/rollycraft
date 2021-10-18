@@ -1,9 +1,10 @@
-![Rolly Craft Banner](./banner.jpg)
+<p align="center">
+  <img width="600" height="200" src="https://github.com/cavanrlee/rollycraft/blob/main/Banner.jpg">
+</p>
 
-<!-- <h2 align='center'>Hi! Im Rolly Cavan</h2>
-<p align='center'><b>Artistic Developer</b></p> -->
 
 <h1>Hey! 👋 I'm Rolly Cavan</h1>
+<p align='center'><b>Artistic Developer</b></p> 
 
 <h2>This is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</h2>
 
