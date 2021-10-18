@@ -2,8 +2,8 @@
 <!-- <h2 align='center'>Hi! Im Rolly Cavan</h2>
 <p align='center'><b>Artistic Developer</b></p> -->
 
-<h2>Hey! 👋 I'm Rolly Cavan this is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</h2>
-
+<h1>Hey! 👋 I'm Rolly Cavan this is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</h1>
+<h2>This is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</h2>
 
 ## Any suggestions?
 
