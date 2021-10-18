@@ -4,9 +4,9 @@
 
 
 <h1>Hey! 👋 I'm Rolly Cavan</h1>
-<p align='center'><b>Artistic Developer</b></p> 
+<h3 align='center'><b>Artistic Developer</b></h3> 
 
-<h2>This is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</h2>
+<p>This is my personal portfolio using native HTML5, CSS3, Bootstrap and some GSAP.js & Anime.js plugins</p>
 
 ## Any suggestions?
 
