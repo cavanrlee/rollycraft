@@ -142,13 +142,13 @@ var pr = 65;
 var html = 85;
 var css3 = 85;
 var javascript = 75;
-var js6 = 75;
+var flutter = 40;
 var php = 50;
-var jquery = 75;
+var jquery = 60;
 var dotnet = 60;
 var sql = 70;
 var java = 45;
-var autocad = 20;
+var autocad = 30;
 
 // ======================================================================= //
 
@@ -161,7 +161,7 @@ skillanim1.add({targets: '#html',strokeDashoffset: 630 - (630 * html) / 100, del
 const skillanim2 = anime.timeline({duration: 1000});
 skillanim2.add({targets: '#css3',strokeDashoffset: 630 - (630 * css3) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
 skillanim2.add({targets: '#javascript',strokeDashoffset: 630 - (630 * javascript) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
-skillanim2.add({targets: '#js6',strokeDashoffset: 630 - (630 * js6) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
+skillanim2.add({targets: '#flutter',strokeDashoffset: 630 - (630 * flutter) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
 
 const skillanim3 = anime.timeline({duration: 1000});
 skillanim3.add({targets: '#php',strokeDashoffset: 630 - (630 * php) / 100, delay: function(el, i) { return i * 100; },loop: false,easing: 'easeOutCirc'})
@@ -216,9 +216,9 @@ document.querySelector("#d4").onclick = skillanim4.restart;
             const output2 = document.querySelector("#p-javascript");      
             const progress2 = {prog: 0}   
             anime({targets: progress2, prog: javascript ,easing: "easeOutCirc",round: 1,delay: 1000,update: function() {output2.innerHTML = JSON.stringify(progress2).split(":")[1].split("}")[0] + "%";}});
-            const output3 = document.querySelector("#p-js6");
+            const output3 = document.querySelector("#p-flutter");
             const progress3 = {prog: 0}   
-            anime({targets: progress3, prog: js6 ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}}); 
+            anime({targets: progress3, prog: flutter ,easing: "easeOutCirc",round: 1,delay: 2000,update: function() {output3.innerHTML = JSON.stringify(progress3).split(":")[1].split("}")[0] + "%";}}); 
       });
 
 
@@ -425,3 +425,8 @@ ScrollTrigger.create({
       end: "bottom bottom",
       scrub: 1,
 });
+
+
+
+
+
