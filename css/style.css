@@ -277,7 +277,7 @@ input[type="radio"] {
 		left: 0;
 		display: block;
 		width: 0%;
-		height: 10px;
+		height: 2px;
 		background-color: #ffabab;
 		-webkit-transition: .3s .2s ease;
 		transition: .3s .2s ease;
@@ -286,7 +286,8 @@ input[type="radio"] {
 		margin-bottom: 10px;
 		display: block;
 		width: 0%;
-		height: 10px;
+		height: 2px;
+		margin-top: 8px;
 		background-color: #ffffff;
 		overflow: hidden;
 		-webkit-transition: .3s ease;
@@ -421,12 +422,12 @@ input[type="radio"] {
 #text-banner #developer {
 		font-size: 20px;
 		font-family: 'Lato-Light';
-		line-height: 45px;
+		line-height: 30px;
 		letter-spacing: 26px;
 }
 .sections-banner-container .container .banner-light {
 		position: absolute;
-		height: 10px;
+		height: 2px;
 		width: 0;
 		float: right;
 		background-color: #ffffff;
