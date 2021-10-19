@@ -39,6 +39,7 @@ window.onscroll = function() {
             navshow.to("#main-header", {backgroundColor: "Transparent", ease:"slow", duration: 1})
             navshow.to("#back-to-top", {yPercent: 250 ,opacity: 0,  ease:"slow", duration: 1});
       }
+
 }
 
 // GSAP MODAL ANIMATION
@@ -338,9 +339,9 @@ function AboutAnimation() {
 
       const abouttextanim = gsap.timeline();
       abouttextanim
-      .from(".animation1", {opacity: 0, transform: "rotate(45deg)", left: "100%",width: "100%", ease: "slow", duration: 1})
+      .from(".animation1", {opacity: 0, transform: "rotate(45deg)", left: "100%", ease: "slow", duration: 1})
       .from(".textanimation1", {opacity: 0, yPercent: 100, ease: "slow", duration: 1})
-      .from(".animation2", {opacity: 0, transform: "rotate(45deg)", left: "100%",width: "100%", ease: "slow", duration: 1})   
+      .from(".animation2", {opacity: 0, transform: "rotate(45deg)", left: "100%", ease: "slow", duration: 1})   
       .from(".textanimation2", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
       .from(".resume-button", {opacity: 0,yPercent: 100, ease: "slow", duration: 1})
             
