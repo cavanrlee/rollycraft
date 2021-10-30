@@ -1067,6 +1067,7 @@ textarea:focus {
 		height: 30px;
 		width: 30px;
 		background: #ffffff;
+		transition: .3s ease;
 }
 .eye:after { /*pupil*/
 		position: absolute;
